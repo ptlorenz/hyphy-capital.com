@@ -1,0 +1,24 @@
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper-left')
+
+  portfolioItems.forEach(portfolioItem => {
+      portfolioItem.addEventListener('mouseover', () => {
+        portfolioItem.childNodes[1].classList.add('img-darken-left');
+      })
+
+      portfolioItem.addEventListener('mouseout', () => {
+        portfolioItem.childNodes[1].classList.remove('img-darken-left');
+      })
+  })
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper-right')
+
+  portfolioItems.forEach(portfolioItem => {
+      portfolioItem.addEventListener('mouseover', () => {
+        portfolioItem.childNodes[1].classList.add('img-darken-right');
+      })
+
+      portfolioItem.addEventListener('mouseout', () => {
+        portfolioItem.childNodes[1].classList.remove('img-darken-right');
+      })
+  })
+</script>

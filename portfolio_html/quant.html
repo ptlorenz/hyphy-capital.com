@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.7.1/css/all.css">
+    <link href="./index12.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+  </head>
+  <body style="background-color:#09232eff;">
+    <div class="banner"></div>
+    <div class="container">
+      <div class="nav-wrapper">
+        <div class="left-side">
+          <div class="nav-link-wrapper active-nav-link">
+
+            <a href="index.html"><p>FUNDS</p></a>
+          </div>
+          <div class="nav-link-wrapper">
+            <a href="strategy.html"><p>ABOUT</p></a>
+          </div>
+        </div>
+        <div class="middle-side">
+          <img src="images/Hyphy_Logo.png" style="width:120px;height:65px;"></a>
+        </div>
+        <div class="right-side">
+          <div class="brand">
+
+            <p>info@hyphy-capital.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="quant-wrapper">
+        <div class="quant-left">
+          <div class="fund-title">Quant Fund</div>
+        </div>
+        <div class="container">
+          <div class="nav-wrapper-quant">
+            <div class="left-side">
+              <div class="nav-link-wrapper active-nav-link">
+
+                <a href="quant.html">Statistics</a>
+              </div>
+              <div class="nav-link-wrapper">
+                <a href="quant_strategy.html">Strategy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quant-aum">
+          <div class="quant-aum-text">Current AUM</div>
+          <div class="quant-aum-figure"> $3,147.29</div>
+        </div>
+        <div class="quant-apy">
+          <div class="quant-apy-text">Current APY</div>
+          <div class="quant-apy-figure"> 45.5%</div>
+        </div>
+        <div class="quant-corr">
+          <div class="quant-corr-text">Current SPY Corr</div>
+          <div class="quant-corr-figure"> 0.11</div>
+        </div>
+      </div>
+      <div class="canvas-wrapper">
+        <canvas id="chart_weekly" width="500px" height="100px" style="padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 20px"></canvas>
+        <canvas id="chart_cumulative" width="500px" height="100px" style="padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 20px"></canvas>
+      </div>
+      <div class="table-wrapper">
+        <table class="styled-table">
+          <thead>
+            <tr >
+              <th id="header_header_web"></th>
+              <th id="header_cumret_web"></th>
+              <th id="header_lwret_web"></th>
+              <th id="header_avgret_web"></th>
+              <th id="header_var_web"></th>
+              <th id="header_sharpe_web"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="nmr_header_web"></td>
+              <td id="nmr_cumret_web"></td>
+              <td id="nmr_lwret_web"></td>
+              <td id="nmr_avgret_web"></td>
+              <td id="nmr_var_web"></td>
+              <td id="nmr_sharpe_web"></td>
+            </tr>
+            <tr>
+              <td id="usd_header_web"></td>
+              <td id="usd_cumret_web"></td>
+              <td id="usd_lwret_web"></td>
+              <td id="usd_avgret_web"></td>
+              <td id="usd_var_web"></td>
+              <td id="usd_sharpe_web"></td>
+            </tr>
+            <tr>
+              <td id="snp_header_web"></td>
+              <td id="snp_cumret_web"></td>
+              <td id="snp_lwret_web"></td>
+              <td id="snp_avgret_web"></td>
+              <td id="snp_var_web"></td>
+              <td id="snp_sharpe_web"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-asterisks-wrapper">
+        <div class="asterisk-one">*)   The Quant Fund carries currency risk, given the inherent structure with the Numerai Hedge Fund. Though the currency risk can be decreased or elminated through shorting NMR exposure against the long NMR position with Numerai</div>
+        <div class="asterisk-two">**)   VaR is defined as the 2 sigma (95%) Value at Risk of weekly returns (lower is better). In simpler language, out of 100 weeks, one's weekly loss will only exceed the VaR 5 times, the other 95 times it will remain lower</div>
+        <div class="asterisk-three">***) Sharpe ratio is the risk adjusted return (higher is better). It divides the fund return minus the risk free return (1-yr Treasury Bond), hence the excess return, divided by the risk (1 sigma of weekly returns). It finds the amount of return per unit of risk.</div>
+      </div>
+      <div class="blocker-wrapper"></div>
+      <div class="wallet-wrapper">
+        <div class="active-wrapper">
+          <h1>Active (Fund) Wallet</h1>
+          <div class="active-address">
+            <p>0x0000000000000000000000000000000000021aed</p>
+            <div class="etherscan-link">
+              <a href="https://etherscan.io/address/0x0000000000000000000000000000000000021aed#tokentxns">Etherscan Link</a>
+            </div>
+          </div>
+        </div>
+        <div class="passive-wrapper">
+          <h1>Passive (Coinbase) Wallet</h1>
+          <div class="passive-address">
+            <p>0x0Dfe973c282437eF36C3C6E0630E52f084939975</p>
+            <div class="etherscan-link">
+              <a href="https://etherscan.io/address/0x0Dfe973c282437eF36C3C6E0630E52f084939975">Etherscan Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="newsletter-wrapper">
+        <h1>Subscribe for weekly updates</h1>
+        <p>Receive fund and model updates</p>
+        <div class="newsletter">
+          <input type="text" class="input" placeholder="Enter Your Email">
+          <i class="fas fa envelope"></i>
+          <div class="btn">Subscribe</div>
+        </div>
+        <div class="blocker-wrapper"></div>
+        <div class="Footer">
+          <div class="Links">
+            <div class="twitter">
+              <a href="https://twitter.com"><img src="images/twitter_icon_lsg.png" style="color:red;width:18px;height:18px;"></a>
+            </div>
+            <div class="tele">
+            <a href="https://telegram.com"><img src="images/tele_icon_lsg.png" style="width:20px;height:20px;"></a>
+            </div>
+            <div class="reddit">
+            <a href="https://reddit.com"><img src="images/reddit_icon_lsg.png" style="width:19px;height:19px;"></a>
+            </div>
+          </div>
+          <div class="Info">HYPHY Capital Global GmbH</div>
+
+        </div>
+
+      </div>
+    <script>
+    const xlabels = [];
+    const xlabels_cumulative = [];
+    const yreturns = [];
+    const yyreturns = [];
+    const y_cumulative_returns = [];
+    const yy_cumulative_returns = [];
+
+    const header_cols = [];
+    const nmr_data = [];
+    const usd_data = [];
+    const snp_data = [];
+
+    chartIt_weekly();
+    getData_weekly();
+    chartIt_cumulative();
+    getData_cumulative();
+    getTable();
+
+    async function chartIt_weekly() {
+      await getData_weekly();
+      const ctx = document.getElementById('chart_weekly').getContext('2d');
+      const myChart1 = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: xlabels,
+              datasets: [{
+                  label: 'Weekly Fund Return',
+                  data: yreturns,
+                  backgroundColor: [
+                      '#0db1b4ff',
+                  ],
+                  borderColor: [
+                      '#0db1b4ff',
+                  ],
+                  borderWidth: 5
+              },
+              {
+                label:'Weekly Benchmark (SPY) Return',
+                data: yyreturns,
+                backgroundColor: [
+                  '#2f64bbff'
+                ],
+                borderColor: [
+                  '#2f64bbff'
+                ],
+                borderWidth: 3
+              }]
+          },
+          options: {
+            plugins: {
+              title: {
+                family: "sans-serif",
+                align: 'start',
+                color: '#FFFFFF',
+                font: {
+                  size:20,
+                },
+                padding: {
+                  bottom: 40
+                },
+                display: true,
+                text: 'Weekly Quant Fund Return (Last 3 Months)',
+              },
+              legend: {
+                position: "bottom",
+                labels:{
+                  color: '#FFFFFF',
+                  font: {
+                    size:14
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                ticks: {
+                  color: '#FFFFFF',
+                  font: {
+                    size:15
+                  }
+                },
+                grid: {
+                  color: "#282c3c",
+                  lineWidth: 3,
+                  borderWidth: 3,
+                  borderColor: "#282c3c"
+                }
+              },
+              y: {
+                ticks: {
+                  color: '#FFFFFF',
+                  font: {
+                    size:15
+                  }
+                },
+                grid: {
+                  color: "#282c3c",
+                  lineWidth: 3,
+                  borderWidth: 3,
+                  borderColor: "#282c3c"
+                }
+              },
+            }
+          }
+
+      });
+    }
+
+    async function getData_weekly() {
+      const response = await fetch('Fund_Analysis_2021_07_08.csv');
+      const data = await response.text();
+
+      const rows = data.split("\n").slice(1);
+      rows.forEach(elt => {
+        const row = elt.split(',');
+        const week = row[0];
+        xlabels.push(week);
+        const fundreturn = row[3];
+        yreturns.push(fundreturn);
+        const snpreturn = row[4];
+        yyreturns.push(snpreturn);
+
+      });
+
+    }
+
+    async function chartIt_cumulative() {
+      await getData_cumulative();
+      const ctx = document.getElementById('chart_cumulative').getContext('2d');
+      const myChart2 = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: xlabels_cumulative,
+              datasets: [{
+                  label: 'Cumulative Fund Return',
+                  data: y_cumulative_returns,
+                  backgroundColor: [
+                      '#0db1b4ff',
+                  ],
+                  borderColor: [
+                      '#0db1b4ff',
+                  ],
+                  borderWidth: 5
+              },
+              {
+                label:'Cumulative Benchmark (SPY) Return',
+                data: yy_cumulative_returns,
+                backgroundColor: [
+                  '#2f64bbff'
+                ],
+                borderColor: [
+                  '#2f64bbff'
+                ],
+                borderWidth: 3
+              }]
+          },
+          options: {
+            plugins: {
+              title: {
+                family: "sans-serif",
+                align: 'start',
+                color: '#FFFFFF',
+                font: {
+                  size:20,
+                },
+                padding: {
+                  bottom: 40
+                },
+                display: true,
+                text: 'Cumulative Quant Fund Return (Last 3 Months)',
+              },
+              legend: {
+                position: "bottom",
+                labels:{
+                  color: '#FFFFFF',
+                  font: {
+                    size:14
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                ticks: {
+                  color: '#FFFFFF',
+                  font: {
+                    size:15
+                  }
+                },
+                grid: {
+                  color: "#282c3c",
+                  lineWidth: 3,
+                  borderWidth: 3,
+                  borderColor: "#282c3c"
+                }
+              },
+              y: {
+                ticks: {
+                  color: '#FFFFFF',
+                  font: {
+                    size:15
+                  }
+                },
+                grid: {
+                  color: "#282c3c",
+                  lineWidth: 3,
+                  borderWidth: 3,
+                  borderColor: "#282c3c"
+                }
+              },
+            }
+          }
+
+      });
+    }
+
+    async function getData_cumulative() {
+      const response = await fetch('Fund_Analysis_2021_07_08.csv');
+      const data = await response.text();
+
+      const rows = data.split("\n").slice(1);
+      rows.forEach(elt => {
+        const row = elt.split(',');
+        const weeks = row[0];
+        xlabels_cumulative.push(weeks);
+        const fund_cumulative_return = row[5];
+        y_cumulative_returns.push(fund_cumulative_return);
+        const snp_cumulative_return = row[6];
+        yy_cumulative_returns.push(snp_cumulative_return);
+
+      });
+
+    }
+
+    async function getTable() {
+      const response = await fetch('Fund_Summary_2021_07_08.csv');
+      const summ_data = await response.text();
+
+      const summ_rows = summ_data.split("\n").slice(0);
+      summ_rows.forEach(elt => {
+        const row = elt.split(',');
+        const headers = row[0];
+        header_cols.push(headers);
+        //console.log(header_cols)
+        //console.log(nocommas)
+        //document.getElementById("header_cols_web").innerHTML = nocommas;
+        const nmr_summary = row[1];
+        nmr_data.push(nmr_summary);
+        //document.getElementById("nmr_data_web").innerHTML = nmr_data;
+        const usd_summary = row[2];
+        usd_data.push(usd_summary);
+        //document.getElementById("usd_data_web").innerHTML = usd_data;
+        const snp_summary = row[3];
+        snp_data.push(snp_summary);
+        //document.getElementById("snp_data_web").innerHTML = snp_data;
+        //const fundreturn = row[3];
+        //yreturns.push(fundreturn);
+        //const snpreturn = row[4];
+        //yyreturns.push(snpreturn);
+
+      });
+      var header_header = header_cols.slice(0)[0];
+      document.getElementById("header_header_web").innerHTML = header_header;
+      var header_cum_return = header_cols.slice(1)[0];
+      document.getElementById("header_cumret_web").innerHTML = header_cum_return;
+      var header_lw_return = header_cols.slice(2)[0];
+      document.getElementById("header_lwret_web").innerHTML = header_lw_return;
+      var header_avg_return = header_cols.slice(3)[0];
+      document.getElementById("header_avgret_web").innerHTML = header_avg_return;
+      var header_var = header_cols.slice(4)[0];
+      document.getElementById("header_var_web").innerHTML = header_var;
+      var header_sharpe = header_cols.slice(5)[0];
+      document.getElementById("header_sharpe_web").innerHTML = header_sharpe;
+
+      var nmr_header = nmr_data.slice(0)[0];
+      document.getElementById("nmr_header_web").innerHTML = nmr_header;
+      var nmr_cum_return = nmr_data.slice(1)[0];
+      document.getElementById("nmr_cumret_web").innerHTML = nmr_cum_return;
+      var nmr_lw_return = nmr_data.slice(2)[0];
+      document.getElementById("nmr_lwret_web").innerHTML = nmr_lw_return;
+      var nmr_avg_return = nmr_data.slice(3)[0];
+      document.getElementById("nmr_avgret_web").innerHTML = nmr_avg_return;
+      var nmr_var = nmr_data.slice(4)[0];
+      document.getElementById("nmr_var_web").innerHTML = nmr_var;
+      var nmr_sharpe = nmr_data.slice(5)[0];
+      document.getElementById("nmr_sharpe_web").innerHTML = nmr_sharpe;
+
+      var usd_header = usd_data.slice(0)[0];
+      document.getElementById("usd_header_web").innerHTML = usd_header;
+      var usd_cum_return = usd_data.slice(1)[0];
+      document.getElementById("usd_cumret_web").innerHTML = usd_cum_return;
+      var usd_lw_return = usd_data.slice(2)[0];
+      document.getElementById("usd_lwret_web").innerHTML = usd_lw_return;
+      var usd_avg_return = usd_data.slice(3)[0];
+      document.getElementById("usd_avgret_web").innerHTML = usd_avg_return;
+      var usd_var = usd_data.slice(4)[0];
+      document.getElementById("usd_var_web").innerHTML = usd_var;
+      var usd_sharpe = usd_data.slice(5)[0];
+      document.getElementById("usd_sharpe_web").innerHTML = usd_sharpe;
+
+      var snp_header = snp_data.slice(0)[0];
+      document.getElementById("snp_header_web").innerHTML = snp_header;
+      var snp_cum_return = snp_data.slice(1)[0];
+      document.getElementById("snp_cumret_web").innerHTML = snp_cum_return;
+      var snp_lw_return = snp_data.slice(2)[0];
+      document.getElementById("snp_lwret_web").innerHTML = snp_lw_return;
+      var snp_avg_return = snp_data.slice(3)[0];
+      document.getElementById("snp_avgret_web").innerHTML = snp_avg_return;
+      var snp_var = snp_data.slice(4)[0];
+      document.getElementById("snp_var_web").innerHTML = snp_var;
+      var snp_sharpe = snp_data.slice(5)[0];
+      document.getElementById("snp_sharpe_web").innerHTML = snp_sharpe;
+
+    }
+    </script>
+  </body>
+</html>
