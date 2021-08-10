@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.7.1/css/all.css">
-    <link href="./index14.css" rel="stylesheet" type="text/css">
+    <link href="./index20.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
   <body style="background-color:#09232eff;">
@@ -42,12 +42,11 @@
         <div class="container-info">
           <div class="nav-wrapper-quant">
             <div class="left-side">
-              <div class="nav-link-wrapper active-nav-link">
-
-                <a href="quant.html">Statistics</a>
+              <div class="brand">
+                <p><a href="quant.html" class="button-quant">Statistics</a></p>
               </div>
-              <div class="nav-link-wrapper">
-                <a href="quant_strategy.html">Strategy</a>
+              <div class="brand">
+                <p><a href="quant_strategy.html" class="button-quant-strategy">Strategy</a></p>
               </div>
             </div>
           </div>
@@ -63,11 +62,13 @@
         <div class="quant-corr">
           <div class="quant-corr-text">Current SPY Corr</div>
           <div class="quant-corr-figure"> 0.11</div>
-        </div>
+          </div>
+        <div class="quant-corr-text-line"></div>
+
       </div>
       <div class="canvas-wrapper">
-        <canvas id="chart_weekly" width="500px" height="100px" style="padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 20px"></canvas>
-        <canvas id="chart_cumulative" width="500px" height="100px" style="padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 20px"></canvas>
+        <canvas id="chart_weekly" width="500px" height="100px" style="padding-left: 200px; padding-right: 200px; padding-top: 20px; padding-bottom: 20px"></canvas>
+        <canvas id="chart_cumulative" width="500px" height="100px" style="padding-left: 200px; padding-right: 200px; padding-top: 20px; padding-bottom: 20px"></canvas>
       </div>
       <div class="table-wrapper">
         <table class="styled-table">
@@ -271,7 +272,7 @@
     }
 
     async function getData_weekly() {
-      const response = await fetch('Fund_Analysis_2021_07_08.csv');
+      const response = await fetch('Fund_Analysis_2021_08_05.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -379,7 +380,7 @@
     }
 
     async function getData_cumulative() {
-      const response = await fetch('Fund_Analysis_2021_07_08.csv');
+      const response = await fetch('Fund_Analysis_2021_08_05.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -397,7 +398,7 @@
     }
 
     async function getTable() {
-      const response = await fetch('Fund_Summary_2021_07_08.csv');
+      const response = await fetch('Fund_Summary_2021_08_05.csv');
       const summ_data = await response.text();
 
       const summ_rows = summ_data.split("\n").slice(0);

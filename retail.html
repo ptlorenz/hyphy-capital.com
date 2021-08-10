@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/favicon.png"/>
-    <title>Quant</title>
+    <title>Retail</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.7.1/css/all.css">
-    <link href="./index14.css" rel="stylesheet" type="text/css">
+    <link href="./index20.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
   <body style="background-color:#09232eff;">
@@ -107,22 +107,10 @@
       </div>
       <div class="blocker-wrapper"></div>
       <div class="wallet-wrapper">
-        <div class="active-wrapper">
-          <h1>Active (Fund) Wallet</h1>
-          <div class="active-address">
-            <p>0x0000000000000000000000000000000000021aed</p>
-            <div class="etherscan-link">
-              <a href="https://etherscan.io/address/0x0000000000000000000000000000000000021aed#tokentxns">Etherscan Link</a>
-            </div>
-          </div>
-        </div>
-        <div class="passive-wrapper">
-          <h1>Passive (Coinbase) Wallet</h1>
-          <div class="passive-address">
-            <p>0x0Dfe973c282437eF36C3C6E0630E52f084939975</p>
-            <div class="etherscan-link">
-              <a href="https://etherscan.io/address/0x0Dfe973c282437eF36C3C6E0630E52f084939975">Etherscan Link</a>
-            </div>
+        <div class="etoro-wrapper">
+          <h1>Hyphy Capital Retail Fund Feed & Composition</h1>
+          <div class="etoro-address">
+            <p><a href="https://www.etoro.com/people/plorenz" target="_blank">Etoro Portfolio</a></p>
           </div>
         </div>
       </div>
@@ -262,7 +250,7 @@
     }
 
     async function getData_weekly() {
-      const response = await fetch('Retail_Fund_Analysis_2021_07_13.csv');
+      const response = await fetch('Retail_Fund_Analysis_2021_08_07.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -370,7 +358,7 @@
     }
 
     async function getData_cumulative() {
-      const response = await fetch('Retail_Fund_Analysis_2021_07_13.csv');
+      const response = await fetch('Retail_Fund_Analysis_2021_08_07.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -388,7 +376,7 @@
     }
 
     async function getTable() {
-      const response = await fetch('Retail_Fund_Summary_2021_07_14.csv');
+      const response = await fetch('Retail_Fund_Summary_2021_08_07.csv');
       const summ_data = await response.text();
 
       const summ_rows = summ_data.split("\n").slice(0);
