@@ -8,9 +8,18 @@
     <title>Funds</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index21.css">
+    <link rel="stylesheet" href="index22.css">
   </head>
   <body style="background-color:#09232eff;">
+    <div id="PopUpMain">
+      <div id="PopUp">
+        <h3 id="Heading">This website is an Alpha Build</h3>
+        <p> please only use on desktop </p>
+        <button class="button-popup">OK</button>
+
+      </div>
+
+    </div>
     <div class="banner"></div>
       <div class="container">
         <div class="nav-wrapper">
@@ -105,5 +114,12 @@
       </div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$('.button-popup').click(function(){
+    $('#PopUpMain').css('display','none');
+  });
+
+</script>
 
 </html>
