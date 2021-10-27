@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.7.1/css/all.css">
-    <link href="./index22.css" rel="stylesheet" type="text/css">
+    <link href="./index28.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
   <body style="background-color:#09232eff;">
@@ -45,27 +45,33 @@
                 <p><a href="quant.html" class="button-quant">Statistics</a></p>
               </div>
               <div class="strat-brand">
-                <p><a href="quant_strategy.html" class="button-quant-strategy">Strategy</a></p>
+                <p><a href="retail_strategy.html" class="button-quant-strategy">Strategy</a></p>
               </div>
             </div>
           </div>
         </div>
         <div class="quant-aum">
           <div class="quant-aum-text">Current AUM</div>
-          <div class="quant-aum-figure"> $43,147.29</div>
+          <div class="quant-aum-figure"> $63,147.29</div>
         </div>
         <div class="quant-apy">
           <div class="quant-apy-text">Current APY</div>
-          <div class="quant-apy-figure"> -29.5%</div>
+          <div class="quant-apy-figure"> 69%</div>
         </div>
         <div class="quant-corr">
           <div class="quant-corr-text">Current SPY Corr</div>
-          <div class="quant-corr-figure"> 0.33</div>
+          <div class="quant-corr-figure"> 0.32</div>
         </div>
       </div>
       <div class="canvas-wrapper">
-        <canvas id="chart_weekly" width="480px" height="100px" style="padding-left: 200px; padding-right: 200px; padding-top: 20px; padding-bottom: 20px"></canvas>
-        <canvas id="chart_cumulative" width="480px" height="100px" style="padding-left: 200px; padding-right: 200px; padding-top: 20px; padding-bottom: 20px"></canvas>
+        <canvas id="chart_weekly" width="500px" height="90px" style="padding-left: 200px; padding-right: 200px; padding-top: 20px; padding-bottom: 20px"></canvas>
+        <canvas id="chart_cumulative" width="500px" height="90px" style="padding-left: 200px; padding-right: 200px; padding-top: 20px; padding-bottom: 20px"></canvas>
+      </div>
+      <div class="attention-wrapper">
+        <div class="attention-box">
+          <img src="images/attention.png" style="width:50px;height:50px;"><p>If you are interested in understanding the the Retail Fund composition and its valuation models please check the <a href="retail_strategy.html" target="_blank">Strategy-Page</a> for more Information. If you are interested in investing in the
+            Retail Fund you can currently only do this via the <a href="https://www.kraken.com/en-us/learn/what-is-numeraire-l">Etoro Brokerage Platform</a> through your own personal account.</p>
+        </div>
       </div>
       <div class="table-wrapper">
         <table class="styled-table">
@@ -108,18 +114,32 @@
         <div class="etoro-wrapper">
           <h1>Hyphy Capital Retail Fund Feed & Composition</h1>
           <div class="etoro-address">
-            <p><a href="https://www.etoro.com/people/plorenz" target="_blank">Etoro Portfolio</a></p>
+            <p><a href="https://www.etoro.com/people/plorenz" target="_blank">Public Etoro Portfolio</a></p>
           </div>
         </div>
       </div>
       <div class="newsletter-wrapper">
-        <h1>Subscribe for weekly updates</h1>
-        <p>Receive fund and model updates</p>
-        <div class="newsletter">
-          <input type="text" class="input" placeholder="Enter Your Email">
-          <i class="fas fa envelope"></i>
-          <div class="btn">Subscribe</div>
+        <h1>Subscribe for weekly Model & Fund Updates</h1>
+        <!-- Begin Mailchimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+        	#mc_embed_signup{}
+        	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+        	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        </style>
+        <div id="mc_embed_signup">
+        <form action="https://hyphy-capital.us5.list-manage.com/subscribe/post?u=2433caf9b27ea63d16f3f8ee9&amp;id=472504d957" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+          <div class="newsletter-wrapper">
+        	<h1><label for="mce-EMAIL"></label></h1></div>
+        	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email address" required style="position: absolute;left: 41%;top: 210%;">
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2433caf9b27ea63d16f3f8ee9_472504d957" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="newsletter-button" style="position: absolute;top: 217%;left:47%;"></div>
+            </div>
+        </form>
         </div>
+      </div>
         <div class="blocker-wrapper"></div>
         <div class="Footer">
           <div class="Links">
@@ -180,10 +200,10 @@
                 label:'Weekly Benchmark (SPY) Return',
                 data: yyreturns,
                 backgroundColor: [
-                  '#2f64bbff'
+                  '#E06666'
                 ],
                 borderColor: [
-                  '#2f64bbff'
+                  '#E06666'
                 ],
                 borderWidth: 3
               }]
@@ -249,7 +269,7 @@
     }
 
     async function getData_weekly() {
-      const response = await fetch('Retail_Fund_Analysis_2021_08_07.csv');
+      const response = await fetch('Plot_Fund_Retail_Analysis_2021_10_26.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -288,10 +308,10 @@
                 label:'Cumulative Benchmark (SPY) Return',
                 data: yy_cumulative_returns,
                 backgroundColor: [
-                  '#2f64bbff'
+                  '#E06666'
                 ],
                 borderColor: [
-                  '#2f64bbff'
+                  '#E06666'
                 ],
                 borderWidth: 3
               }]
@@ -357,7 +377,7 @@
     }
 
     async function getData_cumulative() {
-      const response = await fetch('Retail_Fund_Analysis_2021_08_07.csv');
+      const response = await fetch('Plot_Fund_Retail_Analysis_2021_10_26.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -365,9 +385,9 @@
         const row = elt.split(',');
         const weeks = row[0];
         xlabels_cumulative.push(weeks);
-        const fund_cumulative_return = row[8];
+        const fund_cumulative_return = row[10];
         y_cumulative_returns.push(fund_cumulative_return);
-        const snp_cumulative_return = row[9];
+        const snp_cumulative_return = row[11];
         yy_cumulative_returns.push(snp_cumulative_return);
 
       });
@@ -375,7 +395,7 @@
     }
 
     async function getTable() {
-      const response = await fetch('Retail_Fund_Summary_2021_08_07.csv');
+      const response = await fetch('Retail_Fund_Summary_2021_10_26.csv');
       const summ_data = await response.text();
 
       const summ_rows = summ_data.split("\n").slice(0);
