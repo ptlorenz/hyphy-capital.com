@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.7.1/css/all.css">
-    <link href="./index28.css" rel="stylesheet" type="text/css">
+    <link href="./index44.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
   <body style="background-color:#09232eff;">
@@ -56,11 +56,11 @@
         </div>
         <div class="quant-apy">
           <div class="quant-apy-text">Current APY</div>
-          <div class="quant-apy-figure"> 45.5%</div>
+          <div class="quant-apy-figure"> 15.5%</div>
         </div>
         <div class="quant-corr">
           <div class="quant-corr-text">Current SPY Corr</div>
-          <div class="quant-corr-figure"> 0.06</div>
+          <div class="quant-corr-figure"> -0.06</div>
           </div>
         <div class="quant-corr-text-line"></div>
 
@@ -119,6 +119,20 @@
         <div class="asterisk-one">*)   The Quant Fund carries currency risk, given the inherent structure with the Numerai Hedge Fund. Though the currency risk can be decreased or elminated through shorting NMR exposure against the long NMR position with Numerai</div>
         <div class="asterisk-two">**)   VaR is defined as the 2 sigma (95%) Value at Risk of weekly returns (lower is better). In simpler language, out of 100 weeks, one's weekly loss will only exceed the VaR 5 times, the other 95 times it will remain lower</div>
         <div class="asterisk-three">***) Sharpe ratio is the risk adjusted return (higher is better). It divides the fund return minus the risk free return (1-yr Treasury Bond), hence the excess return, divided by the risk (1 sigma of weekly returns). It finds the amount of return per unit of risk.</div>
+      </div>
+      <div class="description-text-wrapper">
+      <div class="description-text"> <p>Hyphy Capital's Quantitative Fund is a mathematical Fund based on a combination of Google's Open-Source Keras Deep Learning Library, PyTorch, and ExtraGradientBoost that aims to completely eliminate human decision making and is solely based on historic and live financial data. The fund's models are
+        deployed via the <a href="https://numer.ai/" target="_blank">Numerai Hedge Fund</a>. Numerai is a San-Francisco based Hedge Fund using crowd-sourced trading signals. The crowd (Data Scientists or any particpant) is incentivized through a payout mechanism that rewards accurate signals
+        (stock price predictions) and punishes inaccurate signals. Numerai has defined the prediction timeframe to 20 Days, this means every round only resolves after 4 Weeks (taken into account the 2 Day lag at the beginning and end of each epoch). Submissions are still accepted on a weekly basis, thus Hyphy Capital and its Quant Fund are also rewarded on a weekly basis.</p>
+        <p>Numerai does this by accepting <a href="https://www.kraken.com/en-us/learn/what-is-numeraire-l" target="_blank">Numeraire</a>, their in-house ERC-20 token built on the Ethereum Blockchain. Particpants can use l to 'stake'
+        on their own models. Numerai then pays out l to each model, depending on its accuracy. Hyphy Capital's Quant Fund submits 4-6 models (depending on data and compute availability), which are used to submit signals on Numerai. Thus, the Fund's Current AUM is, in reality, denominated in l. Though the Fund keeps a liquid l
+        cushion (5-10% of the total AUM) that is not 'staked' towards the deployed models. This is to remain adaptable to market conditions if necessary ('unstaking' l from Numerai may take about 28 days). </p>
+        <p>The staking/unstaking and payout mechanism happens decentralized via smart contracts on the Ethereum Blockchain and can all be verified either via the <a href="https://etherscan.io/address/0x0000000000000000000000000000000000021aed#tokentxns" target="_blank">Etherscan</a> or the
+        <a href="https://etherscan.io/address/0x0000000000000000000000000000000000021aed#tokentxns" target="_blank">Numerai Signals Leaderboard</a>.</p>
+      </div>
+        <div class="description-video"><iframe width="660" height="375" src="https://www.youtube.com/embed/dhJnt0N497c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        </div>
       </div>
       <div class="blocker-wrapper"></div>
       <div class="wallet-wrapper">
@@ -294,7 +308,7 @@
     }
 
     async function getData_weekly() {
-      const response = await fetch('Plot_Fund_Analysis_2021_10_25.csv');
+      const response = await fetch('Plot_Fund_Analysis_2022_04_16.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -402,7 +416,7 @@
     }
 
     async function getData_cumulative() {
-      const response = await fetch('Plot_Fund_Analysis_2021_10_25.csv');
+      const response = await fetch('Plot_Fund_Analysis_2022_04_16.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -420,7 +434,7 @@
     }
 
     async function getTable() {
-      const response = await fetch('Fund_Summary_2021_10_25.csv');
+      const response = await fetch('Fund_Summary_2022_04_16.csv');
       const summ_data = await response.text();
 
       const summ_rows = summ_data.split("\n").slice(0);

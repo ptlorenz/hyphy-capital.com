@@ -19,7 +19,7 @@
             <a href="index.html"><p>FUNDS</p></a>
           </div>
           <div class="nav-link-wrapper">
-            <a href="strategy.html"><p>ABOUT</p></a>
+            <a href="about.html"><p>ABOUT</p></a>
           </div>
         </div>
         <div class="middle-side">
@@ -73,7 +73,8 @@
           on their own models. Numerai then pays out l to each model, depending on its accuracy. Hyphy Capital's Quant Fund submits 4-6 models (depending on data and compute availability), which are used to submit signals on Numerai. Thus, the Fund's Current AUM is, in reality, denominated in l. Though the Fund keeps a liquid l
           cushion (5-10% of the total AUM) that is not 'staked' towards the deployed models. This is to remain adaptable to market conditions if necessary ('unstaking' l from Numerai may take about 28 days). </p>
           <p>The staking/unstaking and payout mechanism happens decentralized via smart contracts on the Ethereum Blockchain and can all be verified either via the <a href="https://etherscan.io/address/0x0000000000000000000000000000000000021aed#tokentxns" target="_blank">Etherscan</a> or the
-          <a href="https://etherscan.io/address/0x0000000000000000000000000000000000021aed#tokentxns" target="_blank">Numerai Signals Leaderboard</a>.</p></div>
+          <a href="https://etherscan.io/address/0x0000000000000000000000000000000000021aed#tokentxns" target="_blank">Numerai Signals Leaderboard</a>.</p>
+        </div>
           <div class="description-video"><iframe width="660" height="375" src="https://www.youtube.com/embed/dhJnt0N497c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
           </iframe>
           </div>
@@ -201,7 +202,7 @@
     getTable();
 
     async function getTable() {
-      const response = await fetch('Individ_Model_Summary_2021_10_25.csv');
+      const response = await fetch('Individ_Model_Summary_2022_04_16.csv');
       const summ_data = await response.text();
 
       const summ_rows = summ_data.split("\n").slice(0);

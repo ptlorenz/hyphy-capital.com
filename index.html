@@ -8,18 +8,34 @@
     <title>Funds</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index28.css">
+    <link rel="stylesheet" href="index44.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PZH8E61PS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0PZH8E61PS');
+    </script>
   </head>
   <body style="background-color:#09232eff;">
     <div id="PopUpMain">
       <div id="PopUp">
-        <h3 id="Heading">This website is an Alpha Build</h3>
-        <p> please only use on desktop </p>
+        <h3 id="Heading">This website is an Alpha Build / Mock-Up</h3>
+        <p> please only use on desktop (on 80% Zoom)</p>
         <button class="button-popup">OK</button>
 
       </div>
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $('.button-popup').click(function(){
+        $('#PopUpMain').css('display','none');
+      });
+
+    </script>
     <div class="banner"></div>
       <div class="container">
         <div class="nav-wrapper">
@@ -31,11 +47,20 @@
             <div class="nav-link-wrapper">
               <a href="about.html"><p>ABOUT</p></a>
             </div>
+            <div class="nav-link-wrapper">
+              <a href="about.html"><p>CONTACT US</p></a>
+            </div>
           </div>
           <div class="middle-side">
-            <img src="images/Hyphy_Logo.png" style="width:120px;height:65px;"></a>
+            <a href="about.html"><img src="images/Hyphy_Logo.png" style="width:120px;height:65px;"></img></a>
           </div>
           <div class="right-side">
+            <div class="login nav-link-wrapper">
+              <!-- Trigger/Open The Modal -->
+              <a href="slider_test.html"><button id="myBtn" class='login-button'>Login / Signup</button></a>
+
+              <!-- The Modal -->
+            </div>
             <div class="brand">
               <p><a href="https://metamask.io/" class="button-wallet" target="_blank"> Connect Metamask</a></p>
             </div>
@@ -47,13 +72,24 @@
         <div class="aum-figure"><h2> $57,845.66</h2></div>
       </div>
       <div class="description-wrapper">
-        <div class="description-header"><h3>Strategy </h3></div>
+        <div class="description-header"><h3>1 -   Check out Hyphy Capital </h3></div>
+        <div class="description-text-pitchapp">
+          <div class="description-text-pitchapp-left">
+            <p>Click thorugh the Hyphy Capital Pitchdeck on the right to find out more about our Services, Value Proposition and how we make investing as easy and simple as ordering a coffee at Starbucks </p>
+            <p>It gives you a on overview of our company, product, investment process and strategy (including some important KPIs). If you want to learn more about how Hyphy Capital came to be on and get a crash course on investing in 2022 check out our About page for more info</p>
+            <div class="arrow"><img src="images/arrow1.png" width="160px" height="70%"></div>
+          </div>
+          <div class="description-text-pitchapp-right">
+            <iframe src="https://pitch.com/embed/d4116bac-54a6-44ca-a33e-fd8a8e272f26" allow="fullscreen" width="96%" height="370" style="border:0"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="description-wrapper">
+        <div class="description-header"><h3>2 - Understand our Strategy </h3></div>
         <div class="description-text"> <p>Hyphy Capital manages two funds. The Retail Fund is a typical retail, net-long, eps-valuation driven, US-Stock and Crypto Fund. The Quant Fund is a quantitative, market-neutral, ML, US-Stock Fund (denominated in NMR).
         The goal is to understand the performance difference between the regular Retail Fund driven by current thematic topics (ESG, Crypto, Big Tech, etc.) versus the
-        Quant Fund driven by automated quantative strategies through Machine Learning Algorithms. We aim to understand and determine the best way of investing. Hence the starting hypothesis is that there will be no
-        difference between the Retail Fund and the Quant Fund.</p>
-        <p>The methodology is to track return and risk metrics through out the year 2021. This website will be used to publish results and conclusions of this research. Below you can take a closer look at a dashboard for each fund, including statistics,
-        allocation and strategy.</p>
+        Quant Fund driven by automated quantative strategies through Machine Learning Algorithms.</p>
+        <p>By generating a smart contract (The Investooor) below, you create an individual address for you to deposit your money into - completely trustless, non-custodial and verified via Ethereum's block chain.</p>
         <p>Hyphy Capital follows the ultimate vision that no single investor has to either risk the exposure to gain return in financial markets nor has to build quantitative models themselves. We want to allow every interested individual to connect their favorite
           wallet of choice (Metamask, etc.) and then interact with the Hyphy-Capital Smartcontract (HCSC) to deposit or withdraw ETH (or Stablecoins). No more headaches for investors and simple, automated apy collection for the investor. </p></div>
 
@@ -102,8 +138,87 @@
           </div>
         </div>
       </div>
+      <div class="investor-card">
+        <div class="investor-description-header"><h3>The Investooor</h3></div>
+        <div class="description-card-text"> <p>Determine your individual and personalized portfolio exposure via the slider below</p>
+          <div class="form-group">
+    				<label class='form-invest' for="price">Initial Investemnt</label>
+    				<input type="text" name="price" value="1000" class="form-control">
+    			</div>
+          <div class="range">
+            <div class="sliderValue">
+              <label for="quantity"><span name='slider_span'>0</span></label>
+            </div>
+              <div class="field">
+                <div class="value left"> RETAIL ONLY</div>
+                <input name="slider_input" type="range" min="-100" max="100" value="0" steps="1">
+                <div class="value right">QUANT ONLY</div>
+              </div>
+            </div>
+            <div class="individ-apy-wrapper">
+              <div class="drawdown-investor">
+                <div class="apy-investor-text">CALCULATED APY</div>
+                <span name='total2'>0</span>
+              </div>
+              <div class="apy-investor">
+                <div class="drawdown-investor-text">MAX DRAWDOWN</div>
+                <span name='total'>0</span>
+              </div>
+            </div>
+            <script>
+              const slideValue = document.querySelector("[name=slider_span]");
+              const inputSlider = document.querySelector("[name=slider_input]");
+              inputSlider.oninput = (()=>{
+                let value = inputSlider.value;
+                slideValue.textContent = value;
+                slideValue.style.left = (value/2) + "%";
+                slideValue.classList.add("show");
+              });
+
+            </script>
+            <script type="text/javascript">
+            // Grab the things I need in the DOM
+
+          	const priceInput = document.querySelector("[name=price]");
+          	const quantityInput = document.querySelector("[name=slider_input]");
+          	const total = document.querySelector("[name=total]");
+            const total2 = document.querySelector("[name=total2]");
+          	const quantityLabel = document.querySelector("[name=slider_span]");
+
+          	// Write the function here
+          	function calculateDrawdownCost() {
+          		const price = priceInput.value;
+          		const quantity = quantityInput.value;
+          		const cost = price * quantity;
+          		console.log(cost);
+          		total.innerText = cost.toFixed(1) + "%";
+          	}
+            function calculateApyCost() {
+          		const price = priceInput.value;
+          		const quantity = quantityInput.value;
+          		const cost = price * quantity;
+          		console.log(cost);
+          		total2.innerText = cost.toFixed(1) + "%";
+          	}
+
+          	//on first run
+          	calculateDrawdownCost();
+            calculateApyCost();
+
+          	// Add Events Listeners
+          	priceInput.addEventListener("[name=price]", calculateDrawdownCost);
+          	quantityInput.addEventListener("input", calculateDrawdownCost);
+            quantityInput.addEventListener("input", calculateApyCost);
+          	quantityInput.addEventListener("[name=slider_input]", updateQuantityLabel);
+
+            </script>
+            <div class="generate-contract">
+              <a href="retail.html" class="sc-button"> Generate Smart Contract</a>
+            </div>
+          </div>
+      </div>
       <div class="description-2-wrapper">
-        <div class="description-header"><h3>Other Information</h3></div>
+        <div class="description-header"><h3>3 - Other Information</h3></div>
         <div class="Other-columns">
           <div class="NFT-slider"><h3>Hyphy Capital's NFT Collection</h3>
             <div class="filterDiv 001 show">
@@ -115,25 +230,27 @@
                     <input type="radio" name="radio-btn" id="radio3">
                     <input type="radio" name="radio-btn" id="radio4">
 
-                    <div class="slide first">
-                      <a href="https://opensea.io/hyphy_capital">
+                    <div title='KrazyKoala NFT' class="slide first">
+                      <a href="https://opensea.io/assets/0x8056ad118916db0feef1c8b82744fa37e5d57cc0/7909">
                       <img src="hc_nft_1.jpeg" alt=""></a>
                     </div>
                     <div class="slide">
-                      <img src="hc_nft_1.jpeg" alt="">
+                      <a href="https://opensea.io/assets/0xda22422592ee3623c8d3c40fe0059cdecf30ca79/24065">
+                      <img src="nft2.png" alt=""></a>
                     </div>
                     <div class="slide">
-                      <img src="hc_nft_1.jpeg" alt="">
+                      <a href="https://opensea.io/assets/0x78c7549716a6290bd92005eb2a4da9701599428a/3004">
+                      <img src="nft3.jpeg" alt=""></a>
                     </div>
                     <div class="slide ">
-                      <img src="hc_nft_1.jpeg" alt="">
+                      <a href="https://opensea.io/assets/0x78c7549716a6290bd92005eb2a4da9701599428a/5715">
+                      <img src="nft4.jpeg" alt=""></a>
                     </div>
                     <div class="navigation-auto">
                       <div class="auto-btn1"></div>
                       <div class="auto-btn2"></div>
                       <div class="auto-btn3"></div>
                       <div class="auto-btn4"></div>
-
 
                     </div>
                   </div>
@@ -161,10 +278,10 @@
                 <div id="mc_embed_signup_scroll">
               <div class="newsletter-wrapper">
             	<h1><label for="mce-EMAIL"></label></h1></div>
-            	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email address" required style="position: absolute;left: 67.2%;top: 173%;">
+            	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email address" required style="position: relative;left: 2%;top: 1%; width:80%;">
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2433caf9b27ea63d16f3f8ee9_472504d957" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="newsletter-button" style="position: absolute;top:179%;left:73.2%;"></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="newsletter-button" style="position: relative;left: 10%;margin-top:15%;"></div>
                 </div>
             </form>
             </div>
@@ -189,12 +306,5 @@
       </div>
 
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-$('.button-popup').click(function(){
-    $('#PopUpMain').css('display','none');
-  });
-
-</script>
 
 </html>
