@@ -17,7 +17,7 @@ session_start();
 	<title>Funds</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="index44.css">
+	<link rel="stylesheet" href="index_php49.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PZH8E61PS"></script>
 	<script>
@@ -44,7 +44,7 @@ session_start();
 				</div>
 			</div>
 			<div class="middle-side">
-				<a href="about.html"><img src="02_Marketing_copy/images/Hyphy_Logo.png" style="width:120px;height:65px;"></img></a>
+				<a href="about.html"><img src="images/Hyphy_Logo.png" style="width:120px;height:65px;"></img></a>
 			</div>
 			<div class="right-side">
 				<div class="login nav-link-wrapper">
@@ -58,7 +58,23 @@ session_start();
 			</div>
 		</div>
 	</div>
-	<br>
-	Hello, <?php echo $user_data['user_name']; ?>
+	<div class="blocker-wrapper"></div>
+	<div class="description-wrapper">
+		<div class="description-header">Hello, <?php echo $user_data['user_name']; ?> &nbsp; &#128075;&#127996;</div>
+		<div class="description-text">
+			<p>You are succesfully logged into your account</p>
+			<p>DU GAYLINER</p>
+		</div>
+	</div>
+	<div class="account-functions">
+		<div class="description-text">
+			<p>Profile</p>
+			<p>Investooor</p>
+			<p>Open Positions</p>
+			<p>Closed Positions</p>
+			<p>Settings</p>
+		</div>
+	</div>
+
 </body>
 </html>
