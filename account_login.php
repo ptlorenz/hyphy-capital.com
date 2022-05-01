@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 	include("connection.php");
@@ -14,21 +15,35 @@ session_start();
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
 
-			//save to database
-			$user_id = random_num(20);
-			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
+			//read from database
+			$query = "select * from users where user_name = '$user_name' limit 1";
+			$result = mysqli_query($con, $query);
 
-			mysqli_query($con, $query);
+			if($result)
+			{
+				if($result && mysqli_num_rows($result) > 0)
+				{
 
-			header("Location: account_login.php");
-			die;
+					$user_data = mysqli_fetch_assoc($result);
+
+					if($user_data['password'] === $password)
+					{
+
+						$_SESSION['user_id'] = $user_data['user_id'];
+						header("Location: index.php");
+						die;
+					}
+				}
+			}
+
+			echo "wrong username or password!";
 		}else
 		{
-			echo "Please enter some valid information!";
+			echo "wrong username or password!";
 		}
 	}
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -37,24 +52,26 @@ session_start();
     <title>Login</title>
     <link rel="stylesheet" href="login_index40.css">
   </head>
-<body style="background-color:#09232eff;">
+<body  style="background-color:#09232eff;">
 	<div class="modal-content">
 		<a href="index.html"><span class="close">&times;</span></a>
-		<h1>Sign Up</h1>
+		<h1>Login</h1>
 		<form method="post">
 			<div class="txt_field">
 				<input type="text" name="user_name">
 				<span></span>
-				<label>Choose a Username</label>
+				<label>Username</label>
 			</div>
 			<div class="txt_field">
 				<input type="password" name="password">
 				<span></span>
-				<label>Choose a Password</label>
+				<label>Password</label>
 			</div>
-			<input id="button" type="submit" value="Signup">
-			<p>If you already have a password -
-			<a href="account_login.php">Click here to Login</a></p>
+			<div class="pass">Forgot Password?</div>
+			<input type="submit" value="Login">
+			<div class="signup_link">
+				Not a member? <a href="signup.php">Signup</a>
+			</div>
 		</form>
 	</div>
 </body>
