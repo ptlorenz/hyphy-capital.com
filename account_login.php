@@ -30,7 +30,7 @@ session_start();
 					{
 
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: loggedin_index.php");
+						header("Location: loggedin.php");
 						die;
 					}
 				}
