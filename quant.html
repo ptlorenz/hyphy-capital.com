@@ -301,7 +301,7 @@
     }
 
     async function getData_weekly() {
-      const response = await fetch('Plot_Fund_Analysis_2022_04_29.csv');
+      const response = await fetch('Plot_Fund_Analysis_2022_05_05.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -409,7 +409,7 @@
     }
 
     async function getData_cumulative() {
-      const response = await fetch('Plot_Fund_Analysis_2022_04_29.csv');
+      const response = await fetch('Plot_Fund_Analysis_2022_05_05.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -427,7 +427,7 @@
     }
 
     async function getTable() {
-      const response = await fetch('Fund_Summary_2022_04_29.csv');
+      const response = await fetch('Fund_Summary_2022_05_05.csv');
       const summ_data = await response.text();
 
       const summ_rows = summ_data.split("\n").slice(0);
