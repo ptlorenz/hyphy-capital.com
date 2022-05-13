@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.7.1/css/all.css">
-    <link href="./index49.css" rel="stylesheet" type="text/css">
+    <link href="./index51.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
   <body style="background-color:#09232eff;">
@@ -121,10 +121,18 @@
         <div class="asterisk-three">***) Sharpe ratio is the risk adjusted return (higher is better). It divides the fund return minus the risk free return (1-yr Treasury Bond), hence the excess return, divided by the risk (1 sigma of weekly returns). It finds the amount of return per unit of risk.</div>
       </div>
       <div class="description-text-wrapper">
-      <div class="description-text"> <p>Hyphy Capital's Quantitative Fund.</p>
+      <div class="description-card-text"> <p>The Return distribution of Hyphy Capital's Quantitative Fund compared to the S&P 500 Benchmark, shows that the Quant Fund does exactly what it is intended to do, and event exceeds its goals.</p>
+        <p>The Quant Fund has a narrower distribution, flatter tails to the left and right and a higher "bell". Hence returns are more concentrated towards the middle of the curve - the bell area. Statistically this means the Quant Fund
+        exerts less risk, and the returns tend occur in a narrower range.</p>
+        <p>Furthermore, the center of the curve (the mean xi) is also further to the right than the benchmark, indicating that not only is the risk (standard deviation) smaller but also the return higher.</p>
+        <p>This is the holy grail of a Quant Fund.</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="retail.html" class="sc-button">Learn More about the Strategy</a>
       </div>
-        <div class="description-video"><iframe width="660" height="375" src="https://www.youtube.com/embed/dhJnt0N497c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
+        <div class="description-distribution"><canvas id="chart_distribution" width="100px" height="100px"></canvas>
         </div>
       </div>
       <div class="blocker-wrapper"></div>
@@ -198,6 +206,9 @@
     const yyreturns = [];
     const y_cumulative_returns = [];
     const yy_cumulative_returns = [];
+    const xdata = [];
+    const ydata = [];
+    const ydata_bm = [];
 
     const header_cols = [];
     const nmr_data = [];
@@ -208,6 +219,8 @@
     getData_weekly();
     chartIt_cumulative();
     getData_cumulative();
+    chartIt_distribution();
+    getData_distribution();
     getTable();
 
     async function chartIt_weekly() {
@@ -301,7 +314,7 @@
     }
 
     async function getData_weekly() {
-      const response = await fetch('Plot_Fund_Analysis_2022_05_05.csv');
+      const response = await fetch('Newest_Plot_Fund_Analysis.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -409,7 +422,7 @@
     }
 
     async function getData_cumulative() {
-      const response = await fetch('Plot_Fund_Analysis_2022_05_05.csv');
+      const response = await fetch('Newest_Plot_Fund_Analysis.csv');
       const data = await response.text();
 
       const rows = data.split("\n").slice(1);
@@ -427,7 +440,7 @@
     }
 
     async function getTable() {
-      const response = await fetch('Fund_Summary_2022_05_05.csv');
+      const response = await fetch('Newest_Fund_Summary.csv');
       const summ_data = await response.text();
 
       const summ_rows = summ_data.split("\n").slice(0);
@@ -506,6 +519,116 @@
       document.getElementById("snp_sharpe_web").innerHTML = snp_sharpe;
 
     }
+
+    async function chartIt_distribution() {
+      await getData_distribution();
+      const ctx = document.getElementById('chart_distribution').getContext('2d');
+      const myChart3 = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: xdata,
+              datasets: [{
+                  label: 'Fund Round Return Distribution',
+                  data: ydata,
+                  backgroundColor: [
+                      '#0db1b4ff',
+                  ],
+                  borderColor: [
+                      '#0db1b4ff',
+                  ],
+                  borderWidth: 5
+                },
+                {
+                  label:'SPY Monthly Return Distribution',
+                  data: ydata_bm,
+                  backgroundColor: [
+                    '#E06666'
+                  ],
+                  borderColor: [
+                    '#E06666'
+                  ],
+                  borderWidth: 3
+              }]
+          },
+          options: {
+            plugins: {
+              title: {
+                family: "sans-serif",
+                align: 'start',
+                color: '#FFFFFF',
+                font: {
+                  size:20,
+                },
+                padding: {
+                  bottom: 40
+                },
+                display: true,
+                text: 'Monthly Distribution of Returns (All Time)',
+              },
+              legend: {
+                position: "bottom",
+                labels:{
+                  color: '#FFFFFF',
+                  font: {
+                    size:14
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                ticks: {
+                  color: '#FFFFFF',
+                  font: {
+                    size:15
+                  }
+                },
+                grid: {
+                  color: "#282c3c",
+                  lineWidth: 3,
+                  borderWidth: 3,
+                  borderColor: "#282c3c"
+                }
+              },
+              y: {
+                ticks: {
+                  color: '#FFFFFF',
+                  font: {
+                    size:15
+                  }
+                },
+                grid: {
+                  color: "#282c3c",
+                  lineWidth: 3,
+                  borderWidth: 3,
+                  borderColor: "#282c3c"
+                }
+              },
+            }
+          }
+
+      });
+    }
+
+    async function getData_distribution() {
+      const response = await fetch('Newest_Quant_Distribution.csv');
+      const data = await response.text();
+
+      const rows = data.split("\n").slice(1);
+      rows.forEach(elt => {
+        const row = elt.split(',');
+        const x_quant = row[0];
+        xdata.push(x_quant);
+        const y_quant = row[1];
+        ydata.push(y_quant);
+        const y_bm = row[2];
+        ydata_bm.push(y_bm);
+
+      });
+
+    }
+
+
     </script>
   </body>
 </html>
