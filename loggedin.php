@@ -17,7 +17,7 @@ session_start();
 	<title>Funds</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="index_php49.css">
+	<link rel="stylesheet" href="index_php52.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PZH8E61PS"></script>
 	<script>
@@ -63,17 +63,23 @@ session_start();
 		<div class="description-header">Hello, <?php echo $user_data['user_name']; ?> &nbsp; &#128075;&#127996;</div>
 		<div class="description-text">
 			<p>You are succesfully logged into your account</p>
-			<p>DU GAYLINER</p>
+			<p></p>
 		</div>
 	</div>
 	<div class="account-functions">
-		<div class="description-text">
-			<p>Profile</p>
-			<p>Investooor</p>
-			<p>Open Positions</p>
-			<p>Closed Positions</p>
-			<p>Settings</p>
+		<div class="description-text-php">
+			<div class="profile-buttons">
+				<div class="selected-first"><a href="loggedin_profile.php"><p>&#128100; &nbsp;&nbsp;Profile</p></a></div>
+				<div class="selected"><a href="loggedin_investooor.php"><p>&#128640; &nbsp;&nbsp;Investooor</p></a></div>
+				<div class="selected"><a href="loggedin_profile.php"><p>&#128200; &nbsp;&nbsp;Open Positions</p></a></div>
+				<div class="selected"><a href="loggedin_profile.php"><p>&#128201; &nbsp;&nbsp;Closed Positions</p></a></div>
+				<div class="selected-last"><a href="loggedin_profile.php"><p>&#128736; &nbsp;&nbsp;Settings</p></a></div>
+			</div>
+			<div class="contents">
+				Click through the navigation bar on the right to check out your account features and try out the INVESTOOOR for unparalleled yield farming opportunities on the Ethereum Blockchain.
+			</div>
 		</div>
+	</div>
 	</div>
 
 </body>
