@@ -72,7 +72,7 @@
       <div class="attention-wrapper">
         <div class="attention-box">
           <img src="images/attention.png" style="width:50px;height:50px;"><p>If you are interested in investing / buying / renting individual models of the Quant Fund please check the <a href="quant_strategy.html" target="_blank">Strategy-Page</a> for more Information. Currently, this is only possible if you have an Ethereum Wallet (e.g. Metamask),
-            and NMR <a href="https://www.kraken.com/en-us/learn/what-is-numeraire-l">(what is NMR?)</a> as currency to pay for or invest in the models.</p>
+            and NMR <a href="https://www.kraken.com/en-us/learn/what-is-numeraire-l">(what is NMR?)</a> as currency to pay for or invest in our models.</p>
         </div>
       </div>
       <div class="table-wrapper">
