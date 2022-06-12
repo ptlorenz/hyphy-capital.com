@@ -409,7 +409,7 @@ body{
   
   .description-text-pitchapp-right iframe {
     background-color: #09232eff;
-    box-shadow: 0 0 35px rgb(32, 178, 170, 65%);
+    
     border-style: solid;
     border-color: lightseagreen;
     border-radius: 0.9rem;
