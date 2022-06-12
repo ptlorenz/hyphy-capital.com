@@ -205,6 +205,7 @@ input[type="submit"]:hover{
   padding-right: 200px;
   color: lightseagreen;
   background-color: #282c3c;
+  background-image: linear-gradient(to right, #17181f , #282c3c, #17181f );
 }
 
 .content {
