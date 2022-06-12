@@ -362,7 +362,7 @@ body{
   }
   
   .description-card-text {
-    color: #EBEBEB;
+    color: #891a1a;
     margin-top: 5px;
     font-size: 18px;
     line-height: 1.3;
@@ -409,7 +409,7 @@ body{
   
   .description-text-pitchapp-right iframe {
     background-color: #09232eff;
-    
+    box-shadow: 0 0 35px rgb(32, 178, 170, 65%);
     border-style: solid;
     border-color: lightseagreen;
     border-radius: 0.9rem;
@@ -995,7 +995,6 @@ body{
   
   
   .quant-wrapper{
-    //display: flex;//
     justify-content: space-between;
     font-size: 20px;
     padding-left: 200px;
@@ -1010,7 +1009,7 @@ body{
   }
   
   .funds-wrapper{
-    //display: flex;//
+    
     justify-content: space-between;
     font-size: 20px;
     padding-left: 200px;
@@ -1020,7 +1019,7 @@ body{
   }
   
   .quant-fund-wrapper{
-    //display: flex;//
+    
     justify-content: space-between;
     font-size: 20px;
     padding-left: 100px;
@@ -1708,9 +1707,7 @@ body{
     padding-right: 10px;
   
   }
-  .logo-wrapper-left {
-    text-align:
-  }
+  
   
   .logo-wrapper-left img{
     position: relative;
@@ -1727,9 +1724,7 @@ body{
     width: 45%;
   }
   
-  .logo-wrapper-right {
-    text-align:
-  }
+  
   
   .logo-wrapper-right img{
     width: 0.1%;
