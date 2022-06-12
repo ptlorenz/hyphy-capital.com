@@ -11,7 +11,7 @@
     <link href="./index52.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
-  <body style="background-color:#09232eff;background-image: linear-gradient(to top right, rgb(14, 47, 61),rgb(15, 97, 93))">
+  <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
     <div class="banner"></div>
     <div class="container">
       <div class="nav-wrapper" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">

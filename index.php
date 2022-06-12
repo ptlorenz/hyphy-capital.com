@@ -19,7 +19,7 @@
       gtag('config', 'G-0PZH8E61PS');
     </script>
   </head>
-  <body style="background-color:#09232eff;background-image: linear-gradient(to top right, rgb(14, 47, 61),rgb(15, 97, 93))">
+  <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
     <div id="PopUpMain">
       <div id="PopUp">
         <h3 id="Heading">This website is an Alpha Build / Mock-Up</h3>
