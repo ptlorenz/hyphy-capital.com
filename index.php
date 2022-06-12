@@ -48,7 +48,7 @@
               <a href="about.html"><p>ABOUT</p></a>
             </div>
             <div class="nav-link-wrapper">
-              <a href="about.html"><p>CONTACT US</p></a>
+              <a href="about.html"><p>CONTACT</p></a>
             </div>
           </div>
           <div class="middle-side">
