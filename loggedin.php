@@ -37,14 +37,14 @@ session_start();
 					<a href="index"><p>FUNDS</p></a>
 				</div>
 				<div class="nav-link-wrapper">
-					<a href="about.html"><p>ABOUT</p></a>
+					<a href="about"><p>ABOUT</p></a>
 				</div>
 				<div class="nav-link-wrapper">
-					<a href="about.html"><p>CONTACT US</p></a>
+					<a href="about"><p>CONTACT US</p></a>
 				</div>
 			</div>
 			<div class="middle-side">
-				<a href="about.html"><img src="images/Hyphy_Logo.png" style="width:120px;height:65px;"></img></a>
+				<a href="about"><img src="images/Hyphy_Logo.png" style="width:120px;height:65px;"></img></a>
 			</div>
 			<div class="right-side">
 				<div class="login nav-link-wrapper">
@@ -69,11 +69,11 @@ session_start();
 	<div class="account-functions">
 		<div class="description-text-php">
 			<div class="profile-buttons">
-				<div class="selected-first"><a href="loggedin_profile.php"><p>&#128100; &nbsp;&nbsp;Profile</p></a></div>
-				<div class="selected"><a href="loggedin_investooor.php"><p>&#128640; &nbsp;&nbsp;Investooor</p></a></div>
-				<div class="selected"><a href="loggedin_profile.php"><p>&#128200; &nbsp;&nbsp;Open Positions</p></a></div>
-				<div class="selected"><a href="loggedin_profile.php"><p>&#128201; &nbsp;&nbsp;Closed Positions</p></a></div>
-				<div class="selected-last"><a href="loggedin_profile.php"><p>&#128736; &nbsp;&nbsp;Settings</p></a></div>
+				<div class="selected-first"><a href="loggedin_profile"><p>&#128100; &nbsp;&nbsp;Profile</p></a></div>
+				<div class="selected"><a href="loggedin_investooor"><p>&#128640; &nbsp;&nbsp;Investooor</p></a></div>
+				<div class="selected"><a href="loggedin_profile"><p>&#128200; &nbsp;&nbsp;Open Positions</p></a></div>
+				<div class="selected"><a href="loggedin_profile"><p>&#128201; &nbsp;&nbsp;Closed Positions</p></a></div>
+				<div class="selected-last"><a href="loggedin_profile"><p>&#128736; &nbsp;&nbsp;Settings</p></a></div>
 			</div>
 			<div class="contents">
 				Click through the navigation bar on the right to check out your account features and try out the INVESTOOOR for unparalleled yield farming opportunities on the Ethereum Blockchain.
