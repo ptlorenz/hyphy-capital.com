@@ -9,10 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="quant_strategy33.css">
   </head>
-  <body style="background-color:#09232eff;">
+  <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125)">
     <div class="banner"></div>
     <div class="container">
-      <div class="nav-wrapper">
+      <div class="nav-wrapper" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
         <div class="left-side">
           <div class="nav-link-wrapper active-nav-link">
 
@@ -202,7 +202,7 @@
     getTable();
 
     async function getTable() {
-      const response = await fetch('Individ_Model_Summary_2022_04_16.csv');
+      const response = await fetch('Newest_Individ_Model_Summary.csv');
       const summ_data = await response.text();
 
       const summ_rows = summ_data.split("\n").slice(0);
