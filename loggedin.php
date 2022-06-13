@@ -28,9 +28,9 @@ session_start();
 		gtag('config', 'G-0PZH8E61PS');
 	</script>
 </head>
-<body style="background-color:#09232eff;">
+<body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
 	<div class="container">
-		<div class="nav-wrapper">
+		<div class="nav-wrapper" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
 			<div class="left-side">
 				<div class="nav-link-wrapper active-nav-link">
 

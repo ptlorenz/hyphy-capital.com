@@ -52,7 +52,7 @@ session_start();
     <title>Login</title>
     <link rel="stylesheet" href="login_index40.css">
   </head>
-<body  style="background-color:#09232eff;">
+<body  style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
 	<div class="modal-content">
 		<a href="index.html"><span class="close">&times;</span></a>
 		<h1>Login</h1>
@@ -70,7 +70,7 @@ session_start();
 			<div class="pass">Forgot Password?</div>
 			<input type="submit" value="Login">
 			<div class="signup_link">
-				Not a member? <a href="signup.php">Signup</a>
+				Not a member? <a href="signup">Signup</a>
 			</div>
 		</form>
 	</div>

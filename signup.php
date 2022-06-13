@@ -54,7 +54,7 @@ session_start();
 			</div>
 			<input id="button" type="submit" value="Signup">
 			<p>If you already have an Account -
-			<a href="account_login.php">Click here to Login</a></p>
+			<a href="account_login">Click here to Login</a></p>
 		</form>
 	</div>
 </body>
