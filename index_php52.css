@@ -997,7 +997,6 @@ input[type="submit"]:hover{
 
 
 .quant-wrapper{
-  //display: flex;//
   justify-content: space-between;
   font-size: 20px;
   padding-left: 200px;
@@ -1012,7 +1011,6 @@ input[type="submit"]:hover{
 }
 
 .funds-wrapper{
-  //display: flex;//
   justify-content: space-between;
   font-size: 20px;
   padding-left: 200px;
@@ -1022,7 +1020,6 @@ input[type="submit"]:hover{
 }
 
 .quant-fund-wrapper{
-  //display: flex;//
   justify-content: space-between;
   font-size: 20px;
   padding-left: 100px;
@@ -1717,9 +1714,6 @@ input[type="submit"]:hover{
   padding-right: 10px;
 
 }
-.logo-wrapper-left {
-  text-align:
-}
 
 .logo-wrapper-left img{
   position: relative;
@@ -1734,10 +1728,6 @@ input[type="submit"]:hover{
   left: 525px;
   transition: 0.2s;
   width: 45%;
-}
-
-.logo-wrapper-right {
-  text-align:
 }
 
 .logo-wrapper-right img{
