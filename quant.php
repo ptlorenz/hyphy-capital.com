@@ -42,10 +42,10 @@
           <div class="nav-wrapper-quant">
             <div class="left-side">
               <div class="stat-brand">
-                <p><a href="quant.html" class="button-quant">Statistics</a></p>
+                <p><a href="quant" class="button-quant">Statistics</a></p>
               </div>
               <div class="strat-brand">
-                <p><a href="quant_strategy.html" class="button-quant-strategy">Strategy</a></p>
+                <p><a href="quant_strategy" class="button-quant-strategy">Strategy</a></p>
               </div>
             </div>
           </div>
