@@ -54,7 +54,7 @@ session_start();
   </head>
 <body  style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
 	<div class="modal-content">
-		<a href="index.html"><span class="close">&times;</span></a>
+		<a href="index"><span class="close">&times;</span></a>
 		<h1>Login</h1>
 		<form method="post">
 			<div class="txt_field">

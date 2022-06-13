@@ -20,15 +20,6 @@
     </script>
   </head>
   <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
-    <div id="PopUpMain">
-      <div id="PopUp">
-        <h3 id="Heading">This website is an Alpha Build / Mock-Up</h3>
-        <p> please only use on desktop (on 80% Zoom)</p>
-        <button class="button-popup">OK</button>
-
-      </div>
-
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
     $('.button-popup').click(function(){
