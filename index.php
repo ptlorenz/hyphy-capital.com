@@ -45,14 +45,14 @@
               <a href="index"><p>FUNDS</p></a>
             </div>
             <div class="nav-link-wrapper">
-              <a href="about.html"><p>ABOUT</p></a>
+              <a href="about"><p>ABOUT</p></a>
             </div>
             <div class="nav-link-wrapper">
-              <a href="about.html"><p>CONTACT</p></a>
+              <a href="about"><p>CONTACT</p></a>
             </div>
           </div>
           <div class="middle-side">
-            <a href="about.html"><img src="images/Hyphy_Logo.png" style="width:120px;height:65px;"></img></a>
+            <a href="about"><img src="images/Hyphy_Logo.png" style="width:120px;height:65px;"></img></a>
           </div>
           <div class="right-side">
             <div class="login nav-link-wrapper">
@@ -120,7 +120,7 @@
 
                 <h2 class="card-title-left">RETAIL FUND - for the left side of the curve</h2>
                 <p class="card-body">Valuation Model based long term, retail, net long, stock and crypto Fund</p>
-                <a href="retail.html" class="button"> Learn More</a>
+                <a href="retail" class="button"> Learn More</a>
               </div>
             </div>
 

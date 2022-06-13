@@ -16,10 +16,10 @@
         <div class="left-side">
           <div class="nav-link-wrapper active-nav-link">
 
-            <a href="index.html"><p>FUNDS</p></a>
+            <a href="index"><p>FUNDS</p></a>
           </div>
           <div class="nav-link-wrapper">
-            <a href="about.html"><p>ABOUT</p></a>
+            <a href="about"><p>ABOUT</p></a>
           </div>
         </div>
         <div class="middle-side">

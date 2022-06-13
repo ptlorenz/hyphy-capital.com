@@ -16,10 +16,10 @@
         <div class="left-side">
           <div class="nav-link-wrapper active-nav-link">
 
-            <a href="index.html"><p>FUNDS</p></a>
+            <a href="index"><p>FUNDS</p></a>
           </div>
           <div class="nav-link-wrapper">
-            <a href="about.html"><p>ABOUT</p></a>
+            <a href="about"><p>ABOUT</p></a>
           </div>
         </div>
         <div class="middle-side">
@@ -41,10 +41,10 @@
         <div class="nav-wrapper-quant">
           <div class="left-side">
             <div class="stat-brand">
-              <p><a href="quant.html" class="button-quant">Statistics</a></p>
+              <p><a href="quant" class="button-quant">Statistics</a></p>
             </div>
             <div class="strat-brand">
-              <p><a href="quant_strategy.html" class="button-quant-strategy">Strategy</a></p>
+              <p><a href="quant_strategy" class="button-quant-strategy">Strategy</a></p>
             </div>
           </div>
         </div>
