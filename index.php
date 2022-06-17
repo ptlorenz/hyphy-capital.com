@@ -2,13 +2,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="7140e152-b8b9-4e29-a7d3-95994d1954d9" data-blockingmode="auto" type="text/javascript"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <link rel="icon" type="image/png" href="images/favicon.png"/>
     <title>Funds</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index52.css">
+    <link rel="stylesheet" href="index53.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PZH8E61PS"></script>
     <script>
@@ -20,6 +21,7 @@
     </script>
   </head>
   <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
+    <script id="CookieDeclaration" src="https://consent.cookiebot.com/7140e152-b8b9-4e29-a7d3-95994d1954d9/cd.js" type="text/javascript" async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
     $('.button-popup').click(function(){
@@ -122,7 +124,7 @@
               <div class="card-content">
 
                 <h2 class="card-title-right">QUANT FUND - for the right side of the curve</h2>
-                <p class="card-body">ML Model based short term, statistical, market neutral, stock Fund denominated in crypto</p>
+                <p class="card-body">ML Model based statistical, market neutral, stock Fund denominated in crypto</p>
                 <a href="quant" class="button"> Learn More</a>
               </div>
             </div>
