@@ -311,10 +311,6 @@ body{
 }
 
 
-
-.card-body {
-}
-
 .button {
   cursor: pointer;
   margin-right: 20px;
@@ -452,7 +448,6 @@ body{
 
 
 .quant-wrapper{
-  //display: flex;//
   justify-content: space-between;
   font-size: 20px;
   padding-left: 200px;
@@ -965,9 +960,7 @@ body{
   padding-right: 10px;
 
 }
-.logo-wrapper-left {
-  text-align:
-}
+
 
 .logo-wrapper-left img{
   position: relative;
@@ -984,9 +977,7 @@ body{
   width: 45%;
 }
 
-.logo-wrapper-right {
-  text-align:
-}
+
 
 .logo-wrapper-right img{
   width: 0.1%;
