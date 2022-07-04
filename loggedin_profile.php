@@ -30,7 +30,7 @@ session_start();
 </head>
 <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))"">
 	<div class="container">
-		<div class="nav-wrapper">
+		<div class="nav-wrapper" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
 			<div class="left-side">
 				<div class="nav-link-wrapper active-nav-link">
 
@@ -68,11 +68,24 @@ session_start();
 	</div>
 	<div class="account-functions">
 		<div class="description-text-php">
-			<div class="selected-first select"><a href="loggedin_profile"><p>&#128100; &nbsp;&nbsp;Profile</p></a></div>
-			<div class="selected"><a href="loggedin_investooor"><p>&#128640; &nbsp;&nbsp;Investooor</p></a></div>
-			<div class="selected"><a href="loggedin_profile"><p>&#128200; &nbsp;&nbsp;Open Positions</p></a></div>
-			<div class="selected"><a href="loggedin_profile"><p>&#128201; &nbsp;&nbsp;Closed Positions</p></a></div>
-			<div class="selected-last"><a href="loggedin_profile"><p>&#128736; &nbsp;&nbsp;Settings</p></a></div>
+			<div class="profile-buttons">
+				<div class="selected-first select"><a href="loggedin_profile"><p>&#128100; &nbsp;&nbsp;Profile</p></a></div>
+				<div class="selected"><a href="loggedin_investooor"><p>&#128640; &nbsp;&nbsp;Investooor</p></a></div>
+				<div class="selected"><a href="loggedin_profile"><p>&#128200; &nbsp;&nbsp;Open Positions</p></a></div>
+				<div class="selected"><a href="loggedin_profile"><p>&#128201; &nbsp;&nbsp;Closed Positions</p></a></div>
+				<div class="selected-last"><a href="loggedin_profile"><p>&#128736; &nbsp;&nbsp;Settings</p></a></div>
+			</div>
+			<div class="contents">
+				<p>Security Feature: Choose a distinctive avatar of these options or upload your own via the button below</p>
+				<div class="avatar-options"></div>
+				<input type="text" name="upload" value="Upload your own" class="form-control">
+				<input type="text" name="Choose" value="Choose from options" class="form-control">
+				<p>This is for security reasons. It also you to easily identify you are on the correct website and account, and are not being mislead)</p>
+				
+				<p>Manage wallets</p>
+				
+				
+			</div>
 		</div>
 	</div>
 

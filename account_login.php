@@ -50,10 +50,11 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" href="login_index40.css">
+    <link rel="stylesheet" href="login_index41.css">
   </head>
-<body  style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
-	<div class="modal-content">
+<body>
+	<div class="overlay">
+	<div class="modal-content" >
 		<a href="index"><span class="close">&times;</span></a>
 		<h1>Login</h1>
 		<form method="post">
@@ -73,6 +74,7 @@ session_start();
 				Not a member? <a href="signup">Signup</a>
 			</div>
 		</form>
+	</div>
 	</div>
 </body>
 </html>

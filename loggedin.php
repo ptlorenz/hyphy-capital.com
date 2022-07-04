@@ -63,7 +63,7 @@ session_start();
 		<div class="description-header">Hello, <?php echo $user_data['user_name']; ?> &nbsp; &#128075;&#127996;</div>
 		<div class="description-text">
 			<p>You are succesfully logged into your account</p>
-			<p></p>
+			
 		</div>
 	</div>
 	<div class="account-functions">
@@ -76,11 +76,13 @@ session_start();
 				<div class="selected-last"><a href="loggedin_profile"><p>&#128736; &nbsp;&nbsp;Settings</p></a></div>
 			</div>
 			<div class="contents">
-				Click through the navigation bar on the right to check out your account features and try out the INVESTOOOR for unparalleled yield farming opportunities on the Ethereum Blockchain.
+				<p>Click through the navigation bar on the right to check out your account features and try out the INVESTOOOR for unparalleled yield farming opportunities on the Ethereum Blockchain.</p>
+				<p>Important: None of the yield farming comes from liquidity pooling, lending & borrowing or any other counterparty mechanism</p>
+				<div class="arrow1 copy"><img src="images/arrow1 copy.png" width="10%"></div>
 			</div>
 		</div>
 	</div>
-	</div>
+</div>
 
 </body>
 </html>

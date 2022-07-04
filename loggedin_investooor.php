@@ -68,11 +68,95 @@ session_start();
 	</div>
 	<div class="account-functions">
 		<div class="description-text-php">
-			<div class="selected-first"><a href="loggedin_profile"><p>&#128100; &nbsp;&nbsp;Profile</p></a></div>
-			<div class="selected select"><a href="loggedin_investooor"><p>&#128640; &nbsp;&nbsp;Investooor</p></a></div>
-			<div class="selected"><a href="loggedin_profile"><p>&#128200; &nbsp;&nbsp;Open Positions</p></a></div>
-			<div class="selected"><a href="loggedin_profile"><p>&#128201; &nbsp;&nbsp;Closed Positions</p></a></div>
-			<div class="selected-last"><a href="loggedin_profile"><p>&#128736; &nbsp;&nbsp;Settings</p></a></div>
+			<div class="profile-buttons">
+				<div class="selected-first"><a href="loggedin_profile"><p>&#128100; &nbsp;&nbsp;Profile</p></a></div>
+				<div class="selected select"><a href="loggedin_investooor"><p>&#128640; &nbsp;&nbsp;Investooor</p></a></div>
+				<div class="selected"><a href="loggedin_profile"><p>&#128200; &nbsp;&nbsp;Open Positions</p></a></div>
+				<div class="selected"><a href="loggedin_profile"><p>&#128201; &nbsp;&nbsp;Closed Positions</p></a></div>
+				<div class="selected-last"><a href="loggedin_profile"><p>&#128736; &nbsp;&nbsp;Settings</p></a></div>
+			</div>	
+			<div class="contents">
+				<p>Available in wallet</p>
+				<p>INVESTOOR</p>
+				<div class="description-card-text"> <p>Determine your individual and personalized portfolio exposure via the slider below</p>
+          			<div class="form-group">
+    				<label class='form-invest' for="price">Initial Investemnt</label>
+    				<input type="text" name="price" value="1000" class="form-control">
+    				</div>
+				<div class="range">
+					<div class="sliderValue">
+					<label for="quantity"><span name='slider_span'>0</span></label>
+					</div>
+					<div class="field">
+						<div class="value left"> RETAIL ONLY</div>
+						<input name="slider_input" type="range" min="-100" max="100" value="0" steps="1">
+						<div class="value right">QUANT ONLY</div>
+					</div>
+					</div>
+					<div class="individ-apy-wrapper">
+					<div class="drawdown-investor">
+						<div class="apy-investor-text">CALCULATED APY</div>
+						<span name='total2'>0</span>
+					</div>
+					<div class="apy-investor">
+						<div class="drawdown-investor-text">MAX DRAWDOWN</div>
+						<span name='total'>0</span>
+					</div>
+					</div>
+					<script>
+					const slideValue = document.querySelector("[name=slider_span]");
+					const inputSlider = document.querySelector("[name=slider_input]");
+					inputSlider.oninput = (()=>{
+						let value = inputSlider.value;
+						slideValue.textContent = value;
+						slideValue.style.left = (value/2) + "%";
+						slideValue.classList.add("show");
+					});
+
+					</script>
+					<script type="text/javascript">
+					// Grab the things I need in the DOM
+
+					const priceInput = document.querySelector("[name=price]");
+					const quantityInput = document.querySelector("[name=slider_input]");
+					const total = document.querySelector("[name=total]");
+					const total2 = document.querySelector("[name=total2]");
+					const quantityLabel = document.querySelector("[name=slider_span]");
+
+					// Write the function here
+					function calculateDrawdownCost() {
+						const price = priceInput.value;
+						const quantity = quantityInput.value;
+						const cost = price * quantity;
+						console.log(cost);
+						total.innerText = cost.toFixed(1) + "%";
+					}
+					function calculateApyCost() {
+						const price = priceInput.value;
+						const quantity = quantityInput.value;
+						const cost = price * quantity;
+						console.log(cost);
+						total2.innerText = cost.toFixed(1) + "%";
+					}
+
+					//on first run
+					calculateDrawdownCost();
+					calculateApyCost();
+
+					// Add Events Listeners
+					priceInput.addEventListener("[name=price]", calculateDrawdownCost);
+					quantityInput.addEventListener("input", calculateDrawdownCost);
+					quantityInput.addEventListener("input", calculateApyCost);
+					quantityInput.addEventListener("[name=slider_input]", updateQuantityLabel);
+
+					</script>
+					<div class="generate-contract">
+					<a href="retail.html" class="sc-button"> Generate Smart Contract</a>
+					</div>
+				</div>
+				<p> help</p>
+				
+				
 		</div>
 	</div>
 

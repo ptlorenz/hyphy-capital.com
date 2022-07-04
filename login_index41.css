@@ -3,6 +3,8 @@ body{
   margin: 0px;
   line-height: 2;
   zoom: 80%;
+  background-color:#09232eff;
+  background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125));
   }
 
 .container{
@@ -15,6 +17,18 @@ body{
 .container-info{
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.overlay{
+  opacity:0.8;
+  background-color:rgb(202, 79, 79);
+  background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125));
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:1000;
 }
 
 #PopUpMain {
