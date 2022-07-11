@@ -9,7 +9,7 @@
     <title>Funds</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index53.css">
+    <link rel="stylesheet" href="index54.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PZH8E61PS"></script>
     <script>
@@ -21,6 +21,7 @@
     </script>
   </head>
   <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
     $('.button-popup').click(function(){
