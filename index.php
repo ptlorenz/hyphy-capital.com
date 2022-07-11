@@ -21,7 +21,7 @@
     </script>
   </head>
   <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
-    
+    <script id="CookieDeclaration" src="https://consent.cookiebot.com/7140e152-b8b9-4e29-a7d3-95994d1954d9/cd.js" type="text/javascript" async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
     $('.button-popup').click(function(){
