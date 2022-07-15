@@ -76,8 +76,8 @@
 
       </div>
       <div class="canvas-wrapper">
-        <canvas id="chart_weekly" width="500px" height="90px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
-        <canvas id="chart_cumulative" width="500px" height="90px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
+        <canvas id="chart_weekly" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
+        <canvas id="chart_cumulative" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
       </div>
       <div class="attention-wrapper">
         <div class="attention-box">
