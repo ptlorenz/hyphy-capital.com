@@ -2,8 +2,13 @@ body{
   font-family: "Lato", sans-serif;
   margin: 0px;
   line-height: 2;
-  zoom: 80%;
   }
+
+.body-content{
+  width: 1300px; 
+  text-align: center;
+  margin: 0 auto; 
+}
 
 .container{
   display: grid;
@@ -16,6 +21,37 @@ body{
   display: grid;
   grid-template-columns: 1fr;
 }
+
+.login {
+  position: relative;
+  top: 20%;
+  margin-right: 40px;
+}
+
+.brand p {
+  position: relative;
+  top: 4%;
+}
+
+.login-button {
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  color: lightseagreen;
+  background-color: #282c3c;
+  padding: 0.5em 1.25em;
+  border-radius: 0.75em;
+  border-color: lightseagreen;
+  font-size: 15px;
+  font-weight:normal;
+}
+
+.login-button:hover, login-button.focus {
+  color: black;
+  background-color: white;
+  box-shadow: 0 0 25px rgba(255,255,255, 0.3);
+}
+
 
 .nav-wrapper{
   display: flex;
@@ -126,8 +162,7 @@ body{
 
 .description-wrapper {
   justify-content: space-between;
-  padding-left: 200px;
-  padding-right: 200px;
+  text-align: left;
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -450,7 +485,6 @@ body{
 .quant-wrapper{
   justify-content: space-between;
   font-size: 20px;
-  padding-left: 200px;
   padding-top: 60px;
   padding-bottom: 20px;
   padding-right: 200px;
@@ -781,8 +815,8 @@ body{
 
 .description-video {
   position: relative;
-  padding-top: 125px;
-  padding-left: 150px;
+  padding-top: 8px;
+  padding-left: 50px;
   align-items: center;
 
 }
@@ -976,7 +1010,6 @@ body{
   transition: 0.2s;
   width: 45%;
 }
-
 
 
 .logo-wrapper-right img{
