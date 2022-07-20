@@ -7,7 +7,7 @@
     <title>About</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index54.css">
+    <link rel="stylesheet" href="index58.css">
   </head>
   <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
     <div class="banner"></div>
@@ -36,7 +36,7 @@
               <!-- The Modal -->
             </div>
           <div class="brand">
-            <p><a href="https://metamask.io/" class="button-wallet" target="_blank"> Connect Metamask</a></p>
+            <p><a href="index.html" class="button-wallet" target="_blank"> Connect Metamask</a></p>
           </div>
         </div>
       </div>

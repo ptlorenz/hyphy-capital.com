@@ -55,7 +55,7 @@
               <!-- The Modal -->
             </div>
             <div class="brand">
-              <p><a href="https://metamask.io/" class="button-wallet" target="_blank"> Connect Metamask</a></p>
+              <p><a href="index.html" class="button-wallet" target="_blank"> Connect Metamask</a></p>
             </div>
           </div>
         </div>
