@@ -1,6 +1,6 @@
 ,Fund Performance in NMR,Fund Performance in USD *,S&P500 (Benchmark) Peformance in USD
-Cumulative Return (in %),9.84,inf,-42.72
-Last Round Return (in %),0.78,inf,-3.68
-Average Round Return (in %),0.14,inf,0.03
-VaR Round Return **,4.11,,4.32
-Sharpe Round Return ***,4.6,,-19.97
+Cumulative Return (in %),9.76,-29.88,-39.37
+Last Round Return (in %),-0.07,-2.43,4.0
+Average Round Return (in %),0.14,-0.43,0.09
+VaR Round Return **,4.08,79.42,4.39
+Sharpe Round Return ***,4.63,-0.76,-18.09
