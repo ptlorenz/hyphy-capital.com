@@ -186,6 +186,7 @@
         </div>
 
       </div>
+    </div>
     <script>
     const xlabels = [];
     const xlabels_cumulative = [];
