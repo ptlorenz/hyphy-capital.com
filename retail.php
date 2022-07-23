@@ -11,7 +11,7 @@
     <link href="./index58.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
-  <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
+  <body style="background-color:#09232eff;background-image: linear-gradient(to top right, rgb(14, 47, 61),rgb(15, 97, 93))">
     <div class="banner"></div>
     <div class="container">
       <div class="nav-wrapper" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
@@ -23,27 +23,17 @@
           <div class="nav-link-wrapper">
             <a href="about"><p>ABOUT</p></a>
           </div>
-          <div class="nav-link-wrapper">
-              <a href="about"><p>CONTACT</p></a>
-            </div>
         </div>
         <div class="middle-side">
-          <img src="images/Hyphy_Logo1.png" style="width:120px;height:65px;"></a>
+          <img src="images/Hyphy_Logo.png" style="width:120px;height:65px;"></a>
         </div>
         <div class="right-side">
-          <div class="login nav-link-wrapper">
-              <!-- Trigger/Open The Modal -->
-              <a href="account_login"><button id="myBtn" class='login-button'>Login / Signup</button></a>
-
-              <!-- The Modal -->
-            </div>
           <div class="brand">
             <p><a href="https://metamask.io/" class="button-wallet" target="_blank"> Connect Metamask</a></p>
           </div>
         </div>
       </div>
     </div>
-    <div class="body-content">
       <div class="quant-wrapper">
         <div class="quant-left">
           <div class="fund-title"><h2>Retail Fund</h2></div>
@@ -73,48 +63,48 @@
           <div class="quant-corr-figure"> 0.32</div>
         </div>
       </div>
-        <div class="canvas-wrapper">
-          <canvas id="chart_weekly" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
-          <canvas id="chart_cumulative" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
-        </div>
+      <div class="canvas-wrapper">
+        <canvas id="chart_weekly" width="500px" height="90px" style="padding-left: 200px; padding-right: 200px; padding-top: 20px; padding-bottom: 20px"></canvas>
+        <canvas id="chart_cumulative" width="500px" height="90px" style="padding-left: 200px; padding-right: 200px; padding-top: 20px; padding-bottom: 20px"></canvas>
+      </div>
       <div class="attention-wrapper">
         <div class="attention-box">
           <img src="images/attention.png" style="width:50px;height:50px;"><p>If you are interested in understanding the the Retail Fund composition and its valuation models please check the <a href="retail_strategy.html" target="_blank">Strategy-Page</a> for more Information. If you are interested in investing in the
             Retail Fund you can currently only do this via the <a href="https://www.kraken.com/en-us/learn/what-is-numeraire-l">Etoro Brokerage Platform</a> through your own personal account.</p>
         </div>
       </div>
-        <div class="table-wrapper">
-          <table class="styled-table">
-            <thead>
-              <tr >
-                <th id="header_header_web"></th>
-                <th id="header_cumret_web"></th>
-                <th id="header_lwret_web"></th>
-                <th id="header_avgret_web"></th>
-                <th id="header_var_web"></th>
-                <th id="header_sharpe_web"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td id="usd_header_web"></td>
-                <td id="usd_cumret_web"></td>
-                <td id="usd_lwret_web"></td>
-                <td id="usd_avgret_web"></td>
-                <td id="usd_var_web"></td>
-                <td id="usd_sharpe_web"></td>
-              </tr>
-              <tr>
-                <td id="snp_header_web"></td>
-                <td id="snp_cumret_web"></td>
-                <td id="snp_lwret_web"></td>
-                <td id="snp_avgret_web"></td>
-                <td id="snp_var_web"></td>
-                <td id="snp_sharpe_web"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="table-wrapper">
+        <table class="styled-table">
+          <thead>
+            <tr >
+              <th id="header_header_web"></th>
+              <th id="header_cumret_web"></th>
+              <th id="header_lwret_web"></th>
+              <th id="header_avgret_web"></th>
+              <th id="header_var_web"></th>
+              <th id="header_sharpe_web"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="usd_header_web"></td>
+              <td id="usd_cumret_web"></td>
+              <td id="usd_lwret_web"></td>
+              <td id="usd_avgret_web"></td>
+              <td id="usd_var_web"></td>
+              <td id="usd_sharpe_web"></td>
+            </tr>
+            <tr>
+              <td id="snp_header_web"></td>
+              <td id="snp_cumret_web"></td>
+              <td id="snp_lwret_web"></td>
+              <td id="snp_avgret_web"></td>
+              <td id="snp_var_web"></td>
+              <td id="snp_sharpe_web"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="table-asterisks-wrapper">
         <div class="asterisk-two">*)   VaR is defined as the 2 sigma (95%) Value at Risk of weekly returns (lower is better). In simpler language, out of 100 weeks, one's weekly loss will only exceed the VaR 5 times, the other 95 times it will remain lower</div>
         <div class="asterisk-three">**) Sharpe ratio is the risk adjusted return (higher is better). It divides the fund return minus the risk free return (1-yr Treasury Bond), hence the excess return, divided by the risk (1 sigma of weekly returns). It finds the amount of return per unit of risk.</div>
@@ -131,9 +121,9 @@
         <br>
         <a href="retail.html" class="sc-button">Learn More about the Strategy</a>
       </div>
-          <div class="description-distribution">
-            <canvas id="chart_distribution" width="100px" height="100px"></canvas>
-          </div>
+        <div class="description-distribution"><canvas id="chart_distribution" width="100px" height="100px"></canvas>
+        </div>
+      </div>
       <div class="blocker-wrapper"></div>
       <div class="wallet-wrapper">
         <div class="etoro-wrapper">
@@ -165,9 +155,8 @@
         </div>
       </div>
     </div>
-    </div>
         <div class="blocker-wrapper"></div>
-        <div class="Footer" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
+        <div class="Footer">
           <div class="Links">
             <div class="twitter">
               <a href="https://twitter.com"><img src="images/twitter_icon_lsg.png" style="color:red;width:18px;height:18px;"></a>
