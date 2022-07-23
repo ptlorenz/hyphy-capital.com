@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.7.1/css/all.css">
-    <link href="./index58.css" rel="stylesheet" type="text/css">
+    <link href="./index60.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
-  <body style="background-color:#09232eff;background-image: linear-gradient(to top right, rgb(14, 47, 61),rgb(15, 97, 93))">
+  <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
     <div class="banner"></div>
     <div class="container">
       <div class="nav-wrapper" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
@@ -23,17 +23,27 @@
           <div class="nav-link-wrapper">
             <a href="about"><p>ABOUT</p></a>
           </div>
+          <div class="nav-link-wrapper">
+              <a href="about"><p>CONTACT</p></a>
+            </div>
         </div>
         <div class="middle-side">
-          <img src="images/Hyphy_Logo.png" style="width:120px;height:65px;"></a>
+          <img src="images/Hyphy_Logo1.png" style="width:120px;height:65px;"></a>
         </div>
         <div class="right-side">
+          <div class="login nav-link-wrapper">
+              <!-- Trigger/Open The Modal -->
+              <a href="account_login"><button id="myBtn" class='login-button'>Login / Signup</button></a>
+
+              <!-- The Modal -->
+            </div>
           <div class="brand">
             <p><a href="https://metamask.io/" class="button-wallet" target="_blank"> Connect Metamask</a></p>
           </div>
         </div>
       </div>
     </div>
+    <div class="body-content">
       <div class="quant-wrapper">
         <div class="quant-left">
           <div class="fund-title"><h2>Retail Fund</h2></div>
@@ -64,8 +74,8 @@
         </div>
       </div>
       <div class="canvas-wrapper">
-        <canvas id="chart_weekly" width="500px" height="90px" style="padding-left: 200px; padding-right: 200px; padding-top: 20px; padding-bottom: 20px"></canvas>
-        <canvas id="chart_cumulative" width="500px" height="90px" style="padding-left: 200px; padding-right: 200px; padding-top: 20px; padding-bottom: 20px"></canvas>
+        <canvas id="chart_weekly" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
+        <canvas id="chart_cumulative" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
       </div>
       <div class="attention-wrapper">
         <div class="attention-box">
@@ -155,8 +165,9 @@
         </div>
       </div>
     </div>
+    </div>
         <div class="blocker-wrapper"></div>
-        <div class="Footer">
+        <div class="Footer" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
           <div class="Links">
             <div class="twitter">
               <a href="https://twitter.com"><img src="images/twitter_icon_lsg.png" style="color:red;width:18px;height:18px;"></a>
