@@ -73,48 +73,48 @@
           <div class="quant-corr-figure"> 0.32</div>
         </div>
       </div>
-      <div class="canvas-wrapper">
-        <canvas id="chart_weekly" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
-        <canvas id="chart_cumulative" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
-      </div>
+        <div class="canvas-wrapper">
+          <canvas id="chart_weekly" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
+          <canvas id="chart_cumulative" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
+        </div>
       <div class="attention-wrapper">
         <div class="attention-box">
           <img src="images/attention.png" style="width:50px;height:50px;"><p>If you are interested in understanding the the Retail Fund composition and its valuation models please check the <a href="retail_strategy.html" target="_blank">Strategy-Page</a> for more Information. If you are interested in investing in the
             Retail Fund you can currently only do this via the <a href="https://www.kraken.com/en-us/learn/what-is-numeraire-l">Etoro Brokerage Platform</a> through your own personal account.</p>
         </div>
       </div>
-      <div class="table-wrapper">
-        <table class="styled-table">
-          <thead>
-            <tr >
-              <th id="header_header_web"></th>
-              <th id="header_cumret_web"></th>
-              <th id="header_lwret_web"></th>
-              <th id="header_avgret_web"></th>
-              <th id="header_var_web"></th>
-              <th id="header_sharpe_web"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td id="usd_header_web"></td>
-              <td id="usd_cumret_web"></td>
-              <td id="usd_lwret_web"></td>
-              <td id="usd_avgret_web"></td>
-              <td id="usd_var_web"></td>
-              <td id="usd_sharpe_web"></td>
-            </tr>
-            <tr>
-              <td id="snp_header_web"></td>
-              <td id="snp_cumret_web"></td>
-              <td id="snp_lwret_web"></td>
-              <td id="snp_avgret_web"></td>
-              <td id="snp_var_web"></td>
-              <td id="snp_sharpe_web"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <div class="table-wrapper">
+          <table class="styled-table">
+            <thead>
+              <tr >
+                <th id="header_header_web"></th>
+                <th id="header_cumret_web"></th>
+                <th id="header_lwret_web"></th>
+                <th id="header_avgret_web"></th>
+                <th id="header_var_web"></th>
+                <th id="header_sharpe_web"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="usd_header_web"></td>
+                <td id="usd_cumret_web"></td>
+                <td id="usd_lwret_web"></td>
+                <td id="usd_avgret_web"></td>
+                <td id="usd_var_web"></td>
+                <td id="usd_sharpe_web"></td>
+              </tr>
+              <tr>
+                <td id="snp_header_web"></td>
+                <td id="snp_cumret_web"></td>
+                <td id="snp_lwret_web"></td>
+                <td id="snp_avgret_web"></td>
+                <td id="snp_var_web"></td>
+                <td id="snp_sharpe_web"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       <div class="table-asterisks-wrapper">
         <div class="asterisk-two">*)   VaR is defined as the 2 sigma (95%) Value at Risk of weekly returns (lower is better). In simpler language, out of 100 weeks, one's weekly loss will only exceed the VaR 5 times, the other 95 times it will remain lower</div>
         <div class="asterisk-three">**) Sharpe ratio is the risk adjusted return (higher is better). It divides the fund return minus the risk free return (1-yr Treasury Bond), hence the excess return, divided by the risk (1 sigma of weekly returns). It finds the amount of return per unit of risk.</div>
@@ -131,9 +131,9 @@
         <br>
         <a href="retail.html" class="sc-button">Learn More about the Strategy</a>
       </div>
-        <div class="description-distribution"><canvas id="chart_distribution" width="100px" height="100px"></canvas>
-        </div>
-      </div>
+          <div class="description-distribution">
+            <canvas id="chart_distribution" width="100px" height="100px"></canvas>
+          </div>
       <div class="blocker-wrapper"></div>
       <div class="wallet-wrapper">
         <div class="etoro-wrapper">
