@@ -195,13 +195,13 @@
   <div class="Footer" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
     <div class="Links">
       <div class="twitter">
-        <a href="https://twitter.com"><img src="images/twitter_icon_lsg.png" style="color:red;width:18px;height:18px;"></a>
+        <a href="https://twitter.com" target="_blank"><img src="images/twitter_icon_lsg.png" style="color:red;width:18px;height:18px;"></a>
       </div>
       <div class="tele">
-      <a href="https://telegram.com"><img src="images/tele_icon_lsg.png" style="width:21px;height:21px;"></a>
+      <a href="https://telegram.com" target="_blank"><img src="images/tele_icon_lsg.png" style="width:21px;height:21px;"></a>
       </div>
       <div class="reddit">
-      <a href="https://reddit.com"><img src="images/reddit_icon_lsg.png" style="width:19px;height:19px;"></a>
+      <a href="https://reddit.com" target="_blank"><img src="images/reddit_icon_lsg.png" style="width:19px;height:19px;"></a>
       </div>
     </div>
     <div class="email">free_money@hyphy-capital.com</div>
