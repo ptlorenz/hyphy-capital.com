@@ -323,7 +323,7 @@
   }
 
   async function getData_weekly() {
-    const response = await fetch('Newest_Plot_Fund_Analysis.csv');
+    const response = await fetch('Newest_Plot_Fund_Analysis_test.csv');
     const data = await response.text();
 
     const rows = data.split("\n").slice(1);
@@ -431,7 +431,7 @@
   }
 
   async function getData_cumulative() {
-    const response = await fetch('Newest_Plot_Fund_Analysis.csv');
+    const response = await fetch('Newest_Plot_Fund_Analysis_test.csv');
     const data = await response.text();
 
     const rows = data.split("\n").slice(1);
@@ -449,7 +449,7 @@
   }
 
   async function getTable() {
-    const response = await fetch('Newest_Fund_Summary.csv');
+    const response = await fetch('Newest_Fund_Summary_test.csv');
     const summ_data = await response.text();
 
     const summ_rows = summ_data.split("\n").slice(0);
@@ -620,7 +620,7 @@
   }
 
   async function getData_distribution() {
-    const response = await fetch('Newest_Quant_Distribution.csv');
+    const response = await fetch('Newest_Quant_Distribution_test.csv');
     const data = await response.text();
 
     const rows = data.split("\n").slice(1);
