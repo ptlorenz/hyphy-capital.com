@@ -50,7 +50,7 @@
           <div class="right-side">
             <div class="login nav-link-wrapper">
               <!-- Trigger/Open The Modal -->
-              <a href="account_login"><button id="myBtn" class='login-button'>Login / Signup</button></a>
+              
 
               <!-- The Modal -->
             </div>
