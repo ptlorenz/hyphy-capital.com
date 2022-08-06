@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.7.1/css/all.css">
-    <link href="./index60.css" rel="stylesheet" type="text/css">
+    <link href="./index63.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
   <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
@@ -75,10 +75,61 @@
         <div class="quant-corr-text-line"></div>
 
       </div>
-      <div class="canvas-wrapper">
-        <canvas id="chart_weekly" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
-        <canvas id="chart_cumulative" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px"></canvas>
+
+      <div class="performance-slider"><h3>Fund Performance</h3>
+        <div class="filterDivs 001 show">
+          <div class="cards">
+            <div class="slider">
+              <div class="navigation-manuals">
+                <label for="radio1" class="manual-btns"> 3-Month</label>
+                <label for="radio2" class="manual-btn"> Year-to-Date</label>
+                <label for="radio3" class="manual-btn"> 1-Year </label>
+                <label for="radio4" class="manual-btn"> All Time</label>
+
+                </div>
+              <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="slide first">
+                  <div class="canvas-wrapper">
+                    <canvas id="chart_weekly_3m" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px; max-width:100%;"></canvas>
+                    <canvas id="chart_cumulative_3m" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px; max-width:100%;"></canvas>
+                  </div>
+                </div>
+                <div class="slide">
+                  <div class="canvas-wrapper">
+                    <canvas id="chart_weekly_ytd" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px; max-width:100%;"></canvas>
+                    <canvas id="chart_cumulative_ytd" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px; max-width:100%;"></canvas>
+                  </div>
+                </div>
+                <div class="slide">
+                  <div class="canvas-wrapper">
+                    <canvas id="chart_weekly_1y" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px; max-width:100%;"></canvas>
+                    <canvas id="chart_cumulative_1y" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px; max-width:100%;"></canvas>
+                  </div>
+                </div>
+                <div class="slide ">
+                  <div class="canvas-wrapper">
+                    <canvas id="chart_weekly_at" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px; max-width:100%;"></canvas>
+                    <canvas id="chart_cumulative_at" width="500px" height="190px" style="padding-top: 20px; padding-bottom: 20px; max-width:100%;"></canvas>
+                  </div>
+                </div>
+                <div class="navigation-auto">
+                  <div class="auto-btn1"></div>
+                  <div class="auto-btn2"></div>
+                  <div class="auto-btn3"></div>
+                  <div class="auto-btn4"></div>
+
+                </div>
+              </div>
+              </div>
+          </div>
+        </div>
       </div>
+    
       <div class="attention-wrapper">
         <div class="attention-box">
           <img src="images/attention.png" style="width:50px;height:50px;"><p>If you are interested in investing / buying / renting individual models of the Quant Fund please check the <a href="quant_strategy.html" target="_blank">Strategy-Page</a> for more Information. Currently, this is only possible if you have an Ethereum Wallet (e.g. Metamask),
@@ -195,13 +246,13 @@
   <div class="Footer" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
     <div class="Links">
       <div class="twitter">
-        <a href="https://twitter.com" target="_blank"><img src="images/twitter_icon_lsg.png" style="color:red;width:18px;height:18px;"></a>
+        <a href="https://twitter.com"><img src="images/twitter_icon_lsg.png" style="color:red;width:18px;height:18px;"></a>
       </div>
       <div class="tele">
-      <a href="https://telegram.com" target="_blank"><img src="images/tele_icon_lsg.png" style="width:21px;height:21px;"></a>
+      <a href="https://telegram.com"><img src="images/tele_icon_lsg.png" style="width:21px;height:21px;"></a>
       </div>
       <div class="reddit">
-      <a href="https://reddit.com" target="_blank"><img src="images/reddit_icon_lsg.png" style="width:19px;height:19px;"></a>
+      <a href="https://reddit.com"><img src="images/reddit_icon_lsg.png" style="width:19px;height:19px;"></a>
       </div>
     </div>
     <div class="email">free_money@hyphy-capital.com</div>
@@ -210,11 +261,29 @@
   </body>
   <script>
   const xlabels = [];
+  const xlabels_ytd = [];
+  const xlabels_1y = [];
+  const xlabels_at = [];
   const xlabels_cumulative = [];
+  const xlabels_cumulative_ytd = [];
+  const xlabels_cumulative_1y = [];
+  const xlabels_cumulative_at = [];
   const yreturns = [];
   const yyreturns = [];
+  const yreturns_ytd = [];
+  const yyreturns_ytd = [];
+  const yreturns_1y = [];
+  const yyreturns_1y = [];
+  const yreturns_at = [];
+  const yyreturns_at = [];
   const y_cumulative_returns = [];
   const yy_cumulative_returns = [];
+  const y_cumulative_returns_ytd = [];
+  const yy_cumulative_returns_ytd = [];
+  const y_cumulative_returns_1y = [];
+  const yy_cumulative_returns_1y = [];
+  const y_cumulative_returns_at = [];
+  const yy_cumulative_returns_at = [];
   const xdata = [];
   const ydata = [];
   const ydata_bm = [];
@@ -228,13 +297,25 @@
   getData_weekly();
   chartIt_cumulative();
   getData_cumulative();
+  chartIt_weekly_ytd();
+  getData_weekly_ytd();
+  chartIt_weekly_1y();
+  getData_weekly_1y();
+  chartIt_weekly_at();
+  getData_weekly_at();
+  chartIt_cumulative_ytd();
+  getData_cumulative_ytd();
+  chartIt_cumulative_1y();
+  getData_cumulative_1y();
+  chartIt_cumulative_at();
+  getData_cumulative_at();
   chartIt_distribution();
   getData_distribution();
   getTable();
 
   async function chartIt_weekly() {
     await getData_weekly();
-    const ctx = document.getElementById('chart_weekly').getContext('2d');
+    const ctx = document.getElementById('chart_weekly_3m').getContext('2d');
     const myChart1 = new Chart(ctx, {
         type: 'line',
         data: {
@@ -323,7 +404,7 @@
   }
 
   async function getData_weekly() {
-    const response = await fetch('Newest_Plot_Fund_Analysis_test.csv');
+    const response = await fetch('Newest_Plot_Fund_Analysis.csv');
     const data = await response.text();
 
     const rows = data.split("\n").slice(1);
@@ -342,7 +423,7 @@
 
   async function chartIt_cumulative() {
     await getData_cumulative();
-    const ctx = document.getElementById('chart_cumulative').getContext('2d');
+    const ctx = document.getElementById('chart_cumulative_3m').getContext('2d');
     const myChart2 = new Chart(ctx, {
         type: 'line',
         data: {
@@ -431,7 +512,7 @@
   }
 
   async function getData_cumulative() {
-    const response = await fetch('Newest_Plot_Fund_Analysis_test.csv');
+    const response = await fetch('Newest_Plot_Fund_Analysis.csv');
     const data = await response.text();
 
     const rows = data.split("\n").slice(1);
@@ -448,8 +529,656 @@
 
   }
 
+  async function chartIt_weekly_ytd() {
+    await getData_weekly_ytd();
+    const ctx = document.getElementById('chart_weekly_ytd').getContext('2d');
+    const myChart1 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: xlabels_ytd,
+            datasets: [{
+                label: 'Weekly Fund Return',
+                data: yreturns_ytd,
+                backgroundColor: [
+                    '#0db1b4ff',
+                ],
+                borderColor: [
+                    '#0db1b4ff',
+                ],
+                borderWidth: 5
+            },
+            {
+              label:'Weekly Benchmark (SPY) Return',
+              data: yyreturns_ytd,
+              backgroundColor: [
+                '#E06666'
+              ],
+              borderColor: [
+                '#E06666'
+              ],
+              borderWidth: 3
+            }]
+        },
+        options: {
+          plugins: {
+            title: {
+              family: "sans-serif",
+              align: 'start',
+              color: '#FFFFFF',
+              font: {
+                size:20,
+              },
+              padding: {
+                bottom: 40
+              },
+              display: true,
+              text: 'Weekly Quant Fund Return (Year to Date)',
+            },
+            legend: {
+              position: "bottom",
+              labels:{
+                color: '#FFFFFF',
+                font: {
+                  size:14
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+            y: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+          }
+        }
+
+    });
+  }
+
+  async function getData_weekly_ytd() {
+    const response = await fetch('Newest_Plot_YTD_Fund_Analysis.csv');
+    const data = await response.text();
+
+    const rows = data.split("\n").slice(1);
+    rows.forEach(elt => {
+      const row = elt.split(',');
+      const week = row[0];
+      xlabels_ytd.push(week);
+      const fundreturn = row[3];
+      yreturns_ytd.push(fundreturn);
+      const snpreturn = row[4];
+      yyreturns_ytd.push(snpreturn);
+
+    });
+
+  }
+
+  async function chartIt_cumulative_ytd() {
+    await getData_cumulative_ytd();
+    const ctx = document.getElementById('chart_cumulative_ytd').getContext('2d');
+    const myChart4 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: xlabels_cumulative_ytd,
+            datasets: [{
+                label: 'Cumulative Fund Return',
+                data: y_cumulative_returns_ytd,
+                backgroundColor: [
+                    '#0db1b4ff',
+                ],
+                borderColor: [
+                    '#0db1b4ff',
+                ],
+                borderWidth: 5
+            },
+            {
+              label:'Cumulative Benchmark (SPY) Return',
+              data: yy_cumulative_returns_ytd,
+              backgroundColor: [
+                '#E06666'
+              ],
+              borderColor: [
+                '#E06666'
+              ],
+              borderWidth: 3
+            }]
+        },
+        options: {
+          plugins: {
+            title: {
+              family: "sans-serif",
+              align: 'start',
+              color: '#FFFFFF',
+              font: {
+                size:20,
+              },
+              padding: {
+                bottom: 40
+              },
+              display: true,
+              text: 'Cumulative Quant Fund Return (Year to Date)',
+            },
+            legend: {
+              position: "bottom",
+              labels:{
+                color: '#FFFFFF',
+                font: {
+                  size:14
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+            y: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+          }
+        }
+
+    });
+  }
+
+  async function getData_cumulative_ytd() {
+    const response = await fetch('Newest_Plot_YTD_Fund_Analysis.csv');
+    const data = await response.text();
+
+    const rows = data.split("\n").slice(1);
+    rows.forEach(elt => {
+      const row = elt.split(',');
+      const weeks = row[0];
+      xlabels_cumulative_ytd.push(weeks);
+      const fund_cumulative_return = row[9];
+      y_cumulative_returns_ytd.push(fund_cumulative_return);
+      const snp_cumulative_return = row[10];
+      yy_cumulative_returns_ytd.push(snp_cumulative_return);
+
+    });
+
+  }
+
+  async function chartIt_weekly_1y() {
+    await getData_weekly_1y();
+    const ctx = document.getElementById('chart_weekly_1y').getContext('2d');
+    const myChart1 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: xlabels_1y,
+            datasets: [{
+                label: 'Weekly Fund Return',
+                data: yreturns_1y,
+                backgroundColor: [
+                    '#0db1b4ff',
+                ],
+                borderColor: [
+                    '#0db1b4ff',
+                ],
+                borderWidth: 5
+            },
+            {
+              label:'Weekly Benchmark (SPY) Return',
+              data: yyreturns_1y,
+              backgroundColor: [
+                '#E06666'
+              ],
+              borderColor: [
+                '#E06666'
+              ],
+              borderWidth: 3
+            }]
+        },
+        options: {
+          plugins: {
+            title: {
+              family: "sans-serif",
+              align: 'start',
+              color: '#FFFFFF',
+              font: {
+                size:20,
+              },
+              padding: {
+                bottom: 40
+              },
+              display: true,
+              text: 'Weekly Quant Fund Return (Last 12 Months)',
+            },
+            legend: {
+              position: "bottom",
+              labels:{
+                color: '#FFFFFF',
+                font: {
+                  size:14
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+            y: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+          }
+        }
+
+    });
+  }
+
+  async function getData_weekly_1y() {
+    const response = await fetch('Newest_1Y_Plot_Fund_Analysis.csv');
+    const data = await response.text();
+
+    const rows = data.split("\n").slice(1);
+    rows.forEach(elt => {
+      const row = elt.split(',');
+      const week = row[0];
+      xlabels_1y.push(week);
+      const fundreturn = row[3];
+      yreturns_1y.push(fundreturn);
+      const snpreturn = row[4];
+      yyreturns_1y.push(snpreturn);
+
+    });
+
+  }
+
+  async function chartIt_cumulative_1y() {
+    await getData_cumulative_1y();
+    const ctx = document.getElementById('chart_cumulative_1y').getContext('2d');
+    const myChart4 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: xlabels_cumulative_1y,
+            datasets: [{
+                label: 'Cumulative Fund Return',
+                data: y_cumulative_returns_1y,
+                backgroundColor: [
+                    '#0db1b4ff',
+                ],
+                borderColor: [
+                    '#0db1b4ff',
+                ],
+                borderWidth: 5
+            },
+            {
+              label:'Cumulative Benchmark (SPY) Return',
+              data: yy_cumulative_returns_1y,
+              backgroundColor: [
+                '#E06666'
+              ],
+              borderColor: [
+                '#E06666'
+              ],
+              borderWidth: 3
+            }]
+        },
+        options: {
+          plugins: {
+            title: {
+              family: "sans-serif",
+              align: 'start',
+              color: '#FFFFFF',
+              font: {
+                size:20,
+              },
+              padding: {
+                bottom: 40
+              },
+              display: true,
+              text: 'Cumulative Quant Fund Return (Last 12 Months)',
+            },
+            legend: {
+              position: "bottom",
+              labels:{
+                color: '#FFFFFF',
+                font: {
+                  size:14
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+            y: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+          }
+        }
+
+    });
+  }
+
+  async function getData_cumulative_1y() {
+    const response = await fetch('Newest_1Y_Plot_Fund_Analysis.csv');
+    const data = await response.text();
+
+    const rows = data.split("\n").slice(1);
+    rows.forEach(elt => {
+      const row = elt.split(',');
+      const weeks = row[0];
+      xlabels_cumulative_1y.push(weeks);
+      const fund_cumulative_return = row[9];
+      y_cumulative_returns_1y.push(fund_cumulative_return);
+      const snp_cumulative_return = row[10];
+      yy_cumulative_returns_1y.push(snp_cumulative_return);
+
+    });
+
+  }
+
+  async function chartIt_weekly_at() {
+    await getData_weekly_at();
+    const ctx = document.getElementById('chart_weekly_at').getContext('2d');
+    const myChart1 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: xlabels_at,
+            datasets: [{
+                label: 'Weekly Fund Return',
+                data: yreturns_at,
+                backgroundColor: [
+                    '#0db1b4ff',
+                ],
+                borderColor: [
+                    '#0db1b4ff',
+                ],
+                borderWidth: 5
+            },
+            {
+              label:'Weekly Benchmark (SPY) Return',
+              data: yyreturns_at,
+              backgroundColor: [
+                '#E06666'
+              ],
+              borderColor: [
+                '#E06666'
+              ],
+              borderWidth: 3
+            }]
+        },
+        options: {
+          plugins: {
+            title: {
+              family: "sans-serif",
+              align: 'start',
+              color: '#FFFFFF',
+              font: {
+                size:20,
+              },
+              padding: {
+                bottom: 40
+              },
+              display: true,
+              text: 'Weekly Quant Fund Return (Since Inception)',
+            },
+            legend: {
+              position: "bottom",
+              labels:{
+                color: '#FFFFFF',
+                font: {
+                  size:14
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+            y: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+          }
+        }
+
+    });
+  }
+
+  async function getData_weekly_at() {
+    const response = await fetch('Newest_Alltime_Plot_Fund_Analysis.csv');
+    const data = await response.text();
+
+    const rows = data.split("\n").slice(1);
+    rows.forEach(elt => {
+      const row = elt.split(',');
+      const week = row[0];
+      xlabels_at.push(week);
+      const fundreturn = row[3];
+      yreturns_at.push(fundreturn);
+      const snpreturn = row[4];
+      yyreturns_at.push(snpreturn);
+
+    });
+
+  }
+
+  async function chartIt_cumulative_at() {
+    await getData_cumulative_at();
+    const ctx = document.getElementById('chart_cumulative_at').getContext('2d');
+    const myChart4 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: xlabels_cumulative_at,
+            datasets: [{
+                label: 'Cumulative Fund Return',
+                data: y_cumulative_returns_at,
+                backgroundColor: [
+                    '#0db1b4ff',
+                ],
+                borderColor: [
+                    '#0db1b4ff',
+                ],
+                borderWidth: 5
+            },
+            {
+              label:'Cumulative Benchmark (SPY) Return',
+              data: yy_cumulative_returns_at,
+              backgroundColor: [
+                '#E06666'
+              ],
+              borderColor: [
+                '#E06666'
+              ],
+              borderWidth: 3
+            }]
+        },
+        options: {
+          plugins: {
+            title: {
+              family: "sans-serif",
+              align: 'start',
+              color: '#FFFFFF',
+              font: {
+                size:20,
+              },
+              padding: {
+                bottom: 40
+              },
+              display: true,
+              text: 'Cumulative Quant Fund Return (Since Inception)',
+            },
+            legend: {
+              position: "bottom",
+              labels:{
+                color: '#FFFFFF',
+                font: {
+                  size:14
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+            y: {
+              ticks: {
+                color: '#FFFFFF',
+                font: {
+                  size:15
+                }
+              },
+              grid: {
+                color: "#282c3c",
+                lineWidth: 3,
+                borderWidth: 3,
+                borderColor: "#282c3c"
+              }
+            },
+          }
+        }
+
+    });
+  }
+
+  async function getData_cumulative_at() {
+    const response = await fetch('Newest_Alltime_Plot_Fund_Analysis.csv');
+    const data = await response.text();
+
+    const rows = data.split("\n").slice(1);
+    rows.forEach(elt => {
+      const row = elt.split(',');
+      const weeks = row[0];
+      xlabels_cumulative_at.push(weeks);
+      const fund_cumulative_return = row[9];
+      y_cumulative_returns_at.push(fund_cumulative_return);
+      const snp_cumulative_return = row[10];
+      yy_cumulative_returns_at.push(snp_cumulative_return);
+
+    });
+
+  }
+
   async function getTable() {
-    const response = await fetch('Newest_Fund_Summary_test.csv');
+    const response = await fetch('Newest_Fund_Summary.csv');
     const summ_data = await response.text();
 
     const summ_rows = summ_data.split("\n").slice(0);
@@ -620,7 +1349,7 @@
   }
 
   async function getData_distribution() {
-    const response = await fetch('Newest_Quant_Distribution_test.csv');
+    const response = await fetch('Newest_Quant_Distribution.csv');
     const data = await response.text();
 
     const rows = data.split("\n").slice(1);
