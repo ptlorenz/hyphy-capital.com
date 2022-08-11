@@ -620,7 +620,7 @@
   }
 
   async function getData_weekly_ytd() {
-    const response = await fetch('Newest_Plot_YTD_Fund_Analysis.csv');
+    const response = await fetch('Newest_YTD_Plot_Fund_Analysis.csv');
     const data = await response.text();
 
     const rows = data.split("\n").slice(1);
@@ -728,7 +728,7 @@
   }
 
   async function getData_cumulative_ytd() {
-    const response = await fetch('Newest_Plot_YTD_Fund_Analysis.csv');
+    const response = await fetch('Newest_YTD_Plot_Fund_Analysis.csv');
     const data = await response.text();
 
     const rows = data.split("\n").slice(1);
