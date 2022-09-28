@@ -201,16 +201,51 @@ input[type="submit"]:hover{
   text-decoration: underline;
 }
 
+.trades-low {
+  text-align: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: -60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:#53539a;
+  background-image: 
+  radial-gradient(at 83% 67%, rgb(7, 75, 80) 0, transparent 58%), 
+  
+  radial-gradient(at 88% 35%, rgba(84, 79, 181, 0.35) 0, transparent 50%), 
+  radial-gradient(at 31% 91%, rgba(14, 69, 96, 0.855) 0, transparent 52%), 
+  radial-gradient(at 27% 71%, rgba(72, 38, 113, 0.825) 0, transparent 49%), 
+  radial-gradient(at 74% 89%, rgba(51, 178, 136, 0.596) 0, transparent 51%), 
+  radial-gradient(at 53% 75%, rgb(12, 84, 77) 0, transparent 45%);
+  background-size: 90%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+
+}
+
+.trades {
+  text-align: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+  margin-top: -10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+
 .nav-wrapper{
   display: flex;
   justify-content: space-between;
   padding-left: 200px;
   padding-top: 5px;
-
+  padding-bottom: 13px;;
   padding-right: 200px;
   color: lightseagreen;
   background-color: #282c3c;
-  background-image: linear-gradient(to right, #17181f , #282c3c, #17181f );
+  background-image: linear-gradient(to right, #17181f ,#282c3c,#282c3c, #17181f );
+  border-bottom: 1px solid rgb(27, 162, 155);
 }
 
 .content {
@@ -234,8 +269,9 @@ input[type="submit"]:hover{
 }
 
 .middle-side {
-  position: relative;
-  left: -40px;
+  position: absolute;
+  left: 44%;
+  top: 1px;
 }
 
 .right-side {
@@ -323,6 +359,41 @@ input[type="submit"]:hover{
 
 }
 
+.text-highlight {
+  position: relative;
+  padding-right: 20%;
+  background-color: lightseagreen;
+  background-image: linear-gradient(to right, rgba(208, 148, 249, 0.645),rgb(29, 171, 164));
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+.text-highlight3 {
+  position: relative;
+  padding-right: 20%;
+  background-color: lightseagreen;
+  background-image: radial-gradient(at 83% 67%, rgb(28, 118, 112) 0, transparent 58%), radial-gradient(at 23% 57%, rgba(63, 37, 142, 0.513) 0, transparent 58%);  
+  background-size: 95%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+.text-highlight2 {
+  position: relative;
+  padding-right: 20%;
+  background-color: lightseagreen;
+  background-image: linear-gradient(to left, rgb(121, 199, 211),rgb(33, 149, 143));
+  background-size: 95%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
 .investor-card {
   justify-content: space-between;
   padding-bottom: 60px;
@@ -377,37 +448,51 @@ input[type="submit"]:hover{
   padding-left: 20px;
   padding-right: 20px;
   color: white;
-  background-color: #09232eff;
+  
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
   border-style: solid;
-  border-color: #282c3c;
+  border-color: lightseagreen;
   border-radius: 0.9rem;
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
+.small-text {
+  padding-top: 0px;
+}
+
 .description-text-pitchapp-left {
   text-align: justify;
-  padding-top: 30px;
+  padding-top: 40px;
   padding-left: 30px;
   padding-right: 40px;
   width: 90%;
 }
 
 .arrow {
-  padding-top: 50px;
-  padding-left: 350px;
-  transform: rotate(-20deg);
+  position: relative;
+  padding-left: 100%;
+  padding-top: 70%;
+  margin: -50%;
+  top: -20%;
+  transform: rotate(-40deg);
   /*text-align: center;*/
+}
+
+.contract-generator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20px;
 }
 
 .description-text-pitchapp-right {
   position: relative;
   vertical-align: middle;
-  padding-top: 55px;
+  padding-top: 45px;
   padding-bottom: 40px;
   padding-left: 40px;
+  padding-right: 30px;
 }
 
 .description-text-pitchapp-right iframe {
@@ -431,7 +516,7 @@ input[type="submit"]:hover{
   font-size: 18px;
   line-height: 1.3;
   text-align: justify;
-  padding-left: 20px;
+
   padding-right: 20px;
   background-color: #09232eff;
   box-shadow: 0 0 20px rgb(0 0 0 / 45%);
@@ -439,6 +524,7 @@ input[type="submit"]:hover{
   border-color: #282c3c;
   border-radius: 0.9rem;
   overflow: hidden;
+  height: 554px;
 }
 
 .performance-slider {
@@ -500,6 +586,12 @@ input[type="submit"]:hover{
   display: none;
   margin-left: 20%;
   padding-bottom: 25px;
+}
+
+.filterDivindex {
+  float: left;
+  display: none;
+  margin-right: -10%;
 }
 
 .filterDivs {
@@ -632,6 +724,13 @@ input[type="submit"]:hover{
   padding-top: 50px;
 }
 
+.slides-index {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  padding-top: 50px;
+}
+
 .slides input {
   display: none;
 }
@@ -646,14 +745,18 @@ input[type="submit"]:hover{
   height: 100%;
 }
 
+.shifter {
+  padding-left: 20px;
+}
+
 .navigation-manual {
   position: relative;
   /*width: 1%;*/
-  margin-top: -20px;
+  margin-top: -30px;
   display: flex;
   padding-top: 0px;
-  padding-left: 15%;
-  top: 40px;
+  padding-left: 26%;
+  
 }
 
 .navigation-manuals {
@@ -663,6 +766,31 @@ input[type="submit"]:hover{
   display: flex;
   padding-top: 0px;
   top: 40px;
+}
+
+.highlights {
+  margin-top:70px;
+  margin-bottom: 40px;
+  font-size: 14pt;
+  color: lightseagreen;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+  box-shadow: -20px 0 50px rgba(32,178,170, 0.5),20px 0 50px rgba(32,178,170, 0.5),0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background-color:lightseagreen;
+  background-image: 
+  radial-gradient(at 83% 67%, rgba(27, 223, 237, 0.73) 0, transparent 58%), 
+  radial-gradient(at 18% 33%, rgba(105, 41, 184, 0.739) 0,transparent 50%), 
+  radial-gradient(at 50% 36%, rgba(105, 41, 184, 0.543) 0,transparent 50%), 
+  radial-gradient(at 75% 39%, rgba(105, 41, 184, 0.757) 0,transparent 50%), 
+  radial-gradient(at 81% 45%, rgba(116, 36, 213, 0.824) 0,transparent 50%), 
+  radial-gradient(at 88% 35%, rgba(92, 255, 233, 0.576) 0, transparent 50%), 
+  radial-gradient(at 31% 91%, rgba(29, 184, 163, 0.855) 0, transparent 52%), 
+  radial-gradient(at 57% 71%, rgba(62, 183, 133, 0.825) 0, transparent 49%), 
+  radial-gradient(at 74% 89%, rgba(54, 224, 167, 0.596) 0, transparent 51%), 
+  radial-gradient(at 23% 75%, rgb(39, 200, 184) 0, transparent 45%);
 }
 
 
@@ -694,7 +822,7 @@ input[type="submit"]:hover{
   border-color: lightseagreen;
   border-radius: 0.8rem;
   overflow: hidden;
-
+  text-align: left;
   transition: transform 500ms ease;
 }
 
@@ -823,15 +951,66 @@ input[type="submit"]:hover{
   cursor: pointer;
   display: inline;
   text-decoration: none;
-  color: black;
-  background-color: lightseagreen;
+  color: white;
+  
   padding: 0.5em 3.5em;
   border-radius: 0.25em;
+  background-color:#4f79cd;
+  background-image: 
+  radial-gradient(at 83% 67%, rgb(41, 156, 164) 0, transparent 58%), 
+  radial-gradient(at 67% 20%, rgba(24, 175, 205, 0.869) 0, transparent 59%), 
+  radial-gradient(at 88% 35%, rgba(59, 122, 149, 0.35) 0, transparent 50%), 
+  radial-gradient(at 31% 91%, rgba(29, 132, 184, 0.855) 0, transparent 52%), 
+  radial-gradient(at 27% 71%, rgba(40, 72, 135, 0.825) 0, transparent 49%), 
+  radial-gradient(at 74% 89%, rgba(51, 178, 136, 0.596) 0, transparent 51%), 
+  radial-gradient(at 53% 75%, rgb(24, 137, 125) 0, transparent 45%);
 
 }
 
 .sc-button:hover, sc-button.focus {
   background-color: white;
+  color: black;
+  background-image: 
+  radial-gradient(at 83% 67%, rgb(255, 255, 255) 0, transparent 58%), 
+  radial-gradient(at 67% 20%, rgba(255, 255, 255, 0.869) 0, transparent 59%), 
+  radial-gradient(at 88% 35%, rgba(255, 255, 255, 0.35) 0, transparent 50%), 
+  radial-gradient(at 31% 91%, rgba(255, 255, 255, 0.855) 0, transparent 52%), 
+  radial-gradient(at 27% 71%, rgba(255, 255, 255, 0.825) 0, transparent 49%), 
+  radial-gradient(at 74% 89%, rgba(243, 243, 243, 0.596) 0, transparent 51%), 
+  radial-gradient(at 53% 75%, rgb(250, 250, 250) 0, transparent 45%);
+}
+
+.sc-button1 {
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  color: white;
+  
+  padding: 0.5em 3.5em;
+  border-radius: 0.25em;
+  background-color:#4f79cd;
+  background-image: 
+  radial-gradient(at 83% 67%, rgb(41, 156, 164) 0, transparent 58%), 
+  radial-gradient(at 67% 20%, rgba(24, 175, 205, 0.869) 0, transparent 59%), 
+  radial-gradient(at 88% 35%, rgba(59, 122, 149, 0.35) 0, transparent 50%), 
+  radial-gradient(at 31% 91%, rgba(29, 132, 184, 0.855) 0, transparent 52%), 
+  radial-gradient(at 27% 71%, rgba(40, 72, 135, 0.825) 0, transparent 49%), 
+  radial-gradient(at 74% 89%, rgba(51, 178, 136, 0.596) 0, transparent 51%), 
+  radial-gradient(at 53% 75%, rgb(24, 137, 125) 0, transparent 45%);
+
+}
+
+.sc-button1:hover, sc-button1.focus {
+  background-color: white;
+  color: black;
+  background-image: 
+  radial-gradient(at 83% 67%, rgb(255, 255, 255) 0, transparent 58%), 
+  radial-gradient(at 67% 20%, rgba(255, 255, 255, 0.869) 0, transparent 59%), 
+  radial-gradient(at 88% 35%, rgba(255, 255, 255, 0.35) 0, transparent 50%), 
+  radial-gradient(at 31% 91%, rgba(255, 255, 255, 0.855) 0, transparent 52%), 
+  radial-gradient(at 27% 71%, rgba(255, 255, 255, 0.825) 0, transparent 49%), 
+  radial-gradient(at 74% 89%, rgba(243, 243, 243, 0.596) 0, transparent 51%), 
+  radial-gradient(at 53% 75%, rgb(250, 250, 250) 0, transparent 45%);
 }
 
 .individ-apy-wrapper{
@@ -884,8 +1063,16 @@ input[type="submit"]:hover{
   cursor: pointer;
   display: inline;
   text-decoration: none;
-  color: black;
-  background-color: lightseagreen;
+  color: white;
+  background-color:#4f79cd;
+  background-image: 
+  radial-gradient(at 83% 67%, rgb(41, 156, 164) 0, transparent 58%), 
+  radial-gradient(at 67% 20%, rgba(24, 175, 205, 0.869) 0, transparent 59%), 
+  radial-gradient(at 88% 35%, rgba(59, 122, 149, 0.35) 0, transparent 50%), 
+  radial-gradient(at 31% 91%, rgba(29, 132, 184, 0.855) 0, transparent 52%), 
+  radial-gradient(at 27% 71%, rgba(40, 72, 135, 0.825) 0, transparent 49%), 
+  radial-gradient(at 74% 89%, rgba(51, 178, 136, 0.596) 0, transparent 51%), 
+  radial-gradient(at 53% 75%, rgb(24, 137, 125) 0, transparent 45%);
   box-shadow: 0 0 25px rgba(32,178,170, 0.4);
   padding: 0.5em 1.25em;
   border-radius: 0.75em;
@@ -894,7 +1081,15 @@ input[type="submit"]:hover{
 
 .button-wallet:hover, button-wallet.focus {
   background-color: white;
-  box-shadow: 0 0 25px rgba(255,255,255, 0.3);
+  background-image: 
+  radial-gradient(at 83% 67%, rgb(255, 255, 255) 0, transparent 58%), 
+  radial-gradient(at 67% 20%, rgba(255, 255, 255, 0.869) 0, transparent 59%), 
+  radial-gradient(at 88% 35%, rgba(255, 255, 255, 0.35) 0, transparent 50%), 
+  radial-gradient(at 31% 91%, rgba(255, 255, 255, 0.855) 0, transparent 52%), 
+  radial-gradient(at 27% 71%, rgba(255, 255, 255, 0.825) 0, transparent 49%), 
+  radial-gradient(at 74% 89%, rgba(255, 255, 255, 0.596) 0, transparent 51%), 
+  radial-gradient(at 53% 75%, rgb(255, 255, 255) 0, transparent 45%);
+  color: black;
 }
 
 .newsletter-button{
@@ -922,11 +1117,6 @@ input[type="submit"]:hover{
 
 }
 
-.email {
-  position: absolute;
-  left: 800px;
-
-}
 
 .stat-brand p {
   color: lightseagreen;
@@ -1010,8 +1200,8 @@ input[type="submit"]:hover{
 }
 
 .email {
-  position: absolute;
-  left: 18.7%;
+  position: relative;
+  left:0;
 }
 
 
@@ -1460,6 +1650,11 @@ input[type="submit"]:hover{
   padding-left: 38.5%;
 }
 
+.generate-contract1 {
+  position: relative;
+  padding-top: 40px;
+
+}
 
 .description-text-wrapper {
   padding-top: 100px;
@@ -1479,6 +1674,14 @@ input[type="submit"]:hover{
   position: relative;
   padding-top: 25px;
   padding-left: 100px;
+  align-items: center;
+
+}
+
+.description-distribution1 {
+  position: relative;
+  padding-top: 25px;
+  
   align-items: center;
 
 }
@@ -1660,6 +1863,16 @@ input[type="submit"]:hover{
   border: 1px solid lightseagreen;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

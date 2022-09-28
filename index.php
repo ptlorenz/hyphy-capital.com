@@ -9,7 +9,8 @@
     <title>Funds</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index63.css">
+    <link rel="stylesheet" href="index78.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PZH8E61PS"></script>
     <script>
@@ -35,22 +36,22 @@
           <div class="left-side">
             <div class="nav-link-wrapper active-nav-link">
 
-              <a href="index"><p>FUNDS</p></a>
+              <a href="index"><p class="text-highlight">FUNDS</p></a>
             </div>
             <div class="nav-link-wrapper">
-              <a href="about"><p>ABOUT</p></a>
+              <a href="about"><p class="text-highlight2">ABOUT</p></a>
             </div>
             <div class="nav-link-wrapper">
-              <a href="about"><p>CONTACT</p></a>
+              <a href="about"><p class="text-highlight3">CONTACT</p></a>
             </div>
           </div>
           <div class="middle-side">
-            <a href="about"><img src="images/Hyphy_Logo1.png" style="width:120px;height:65px;"></img></a>
+            <a href="about"><img src="images/Hyphy_Finance_Logo.png" style="width:280px;height:82px;"></img></a>
           </div>
           <div class="right-side">
             <div class="login nav-link-wrapper">
               <!-- Trigger/Open The Modal -->
-              
+              <a href="account_login"><button id="myBtn" class='login-button'>Login / Signup</button></a>
 
               <!-- The Modal -->
             </div>
@@ -62,31 +63,184 @@
       </div>
       <div class="body-content">
         <div class="aum-wrapper">
-          <div class="aum-text"><h2>Total TVL</h2></div>
+          <div class="aum-text"><h2 style='font-family: "Montserrat", sans-serif;'>Total TVL</h2></div>
           <div class="aum-figure" style='color:white'><h2> $57,845.66</h2></div>
         </div>
         <div class="description-wrapper">
-          <div class="description-header"><h3> Check out Hyphy Capital </h3></div>
+          <div class="description-header"><h3 style='font-family: "Montserrat", sans-serif;'>You Decide Your Own Yield!</h3>
           <div class="description-text-pitchapp">
             <div class="description-text-pitchapp-left">
-              <p>Click thorugh the Hyphy Capital Pitchdeck on the right to find out more about our Services, Value Proposition and how we make investing as easy and simple as ordering a coffee at Starbucks </p>
-              <p>It gives you a on overview of our company, product, investment process and strategy (including some important KPIs). If you want to learn more about how Hyphy Capital came to be on and get a crash course on investing in 2022 check out our About page for more info</p>
+              <h2 >It's simple - Your Crypto, Your Yield</h2>
+              <div class='small-text'>
+                <h3 class="text-highlight">You decide your level of risk, and receive the return you want* </h3></div>
+              <p style='margin: 0; padding: 1px;'>A thinner distribution represents more <span style="color:#6E50DC;text-decoration: underline;font-weight: 900;">stable (but lower) </span> returns!</p>
+              <p style='margin: 0; padding: 1px;'> A wider distribution usually goes for <span style="color:#0db1b4ff;text-decoration: underline;">higher (but more volatile)</span> returns!</p>
+              <p style='margin: 0; padding: 1px;'> And the optimal portfolio is <span style="color:#3282CB;text-decoration: underline;">optimizing </span> for Stability (Risk) and Return!</p>
+              <p style='margin: 0; padding-top: 20px;'> You control how much of your funds are allocated to what risk exposure!</p>
+              <div class="generate-contract1">
+                <a href="retail.html" class="sc-button1"> LET'S GO!</a>
+              </div>
               <div class="arrow"><img src="images/arrow1.png" width="160px" height="70%"></div>
             </div>
             <div class="description-text-pitchapp-right">
-              <iframe src="https://pitch.com/embed/d4116bac-54a6-44ca-a33e-fd8a8e272f26" allow="fullscreen" width="96%" height="370" style="border:0"></iframe>
+              <div class="description-distribution1"><canvas id="chart_distribution_test" width="200px" height="180px"></canvas>
+              <script type="text/javascript">
+                const xdata1 = [];
+                const ydata1 = [];
+                const ydata_bm1 = [];
+                const ydata_bm2 = [];
+
+                chartIt_distribution_test();
+                getData_distribution_test();
+
+                async function chartIt_distribution_test() {
+                  await getData_distribution_test();
+                  const ctx = document.getElementById('chart_distribution_test').getContext('2d');
+                  const myChart3 = new Chart(ctx, {
+                      type: 'line',
+                      data: {
+                          labels: xdata1,
+                          datasets: [
+                            {
+                              label:'Optimal Fund - Mean Return: 14% APY / Sharpe: 6.6',
+                              data: ydata_bm2,
+                              backgroundColor: [
+                                '#3282CB'
+                              ],
+                              borderColor: [
+                                '#3282CB'
+                              ],
+                              borderWidth: 3
+                          },
+                          {
+                              label:'Retail Fund    - Mean Return: 19% APY / Sharpe: 1.4',
+                              data: ydata_bm1,
+                              backgroundColor: [
+                                '#0db1b4ff'
+                              ],
+                              borderColor: [
+                                '#0db1b4ff'
+                              ],
+                              borderWidth: 3
+                          },
+                          {
+                              label: 'Quant Fund    - Mean Return: 9% APY / Sharpe: 2.2',
+                              data: ydata1,
+                              backgroundColor: [
+                                  '#6E50DC',
+                              ],
+                              borderColor: [
+                                  '#6E50DC',
+                              ],
+                              borderWidth: 5
+                            }
+                            ]
+                      },
+                      options: {
+                        plugins: {
+                          
+                          legend: {
+                            position: "bottom",
+                            labels:{
+                              color: '#FFFFFF',
+                              font: {
+                                size:14
+                              }
+                            }
+                          }
+                        },
+                        scales: {
+                          x: {
+                            ticks: {
+                              color: '#FFFFFF',
+                              font: {
+                                size:15
+                              }
+                            },
+                            grid: {
+                              color: "#282c3c",
+                              lineWidth: 3,
+                              borderWidth: 3,
+                              borderColor: "#282c3c"
+                            }
+                          },
+                          y: {
+                            ticks: {
+                              color: '#FFFFFF',
+                              font: {
+                                size:15
+                              }
+                            },
+                            grid: {
+                              color: "#282c3c",
+                              lineWidth: 3,
+                              borderWidth: 3,
+                              borderColor: "#282c3c"
+                            }
+                          },
+                        }
+                      }
+
+                  });
+                }
+
+                async function getData_distribution_test() {
+                  const response = await fetch('All_Distributions_IndexWebsite1.csv');
+                  const data = await response.text();
+
+                  const rows = data.split("\n").slice(1);
+                  rows.forEach(elt => {
+                    const row = elt.split(',');
+                    const x_quant1 = row[0];
+                    xdata1.push(x_quant1);
+                    const y_quant1 = row[1];
+                    ydata1.push(y_quant1);
+                    const y_bm1 = row[2];
+                    ydata_bm1.push(y_bm1);
+                    const y_bm2 = row[3];
+                    ydata_bm2.push(y_bm2);
+
+                  });
+
+                }
+                </script>
+              </div>
             </div>
           </div>
         </div>
+        <div class="highlights">
+          <div class="trades"> <h3>2,786</h3></div>
+          <div class="trades"> <h3>9 - 19% </h3></div>
+          <div class="trades"> <h3>6.6 </h3></div>
+          <div class="trades"> <h3>5 </h3></div>
+          <div class="trades-low"> <h3> Executed Trades</h3></div>
+          <div class="trades-low"> <h3> APY</h3></div>
+          <div class="trades-low"> <h3> Optimal Sharpe</h3></div>
+          <div class="trades-low"> <h3> Users</h3></div>
+        </div>
         <div class="description-wrapper">
-          <div class="description-header"><h3>2 - Understand our Strategy </h3></div>
-          <div class="description-text"> <p>Hyphy Capital manages two funds. The Retail Fund is a typical retail, net-long, eps-valuation driven, US-Stock and Crypto Fund. The Quant Fund is a quantitative, market-neutral, ML, US-Stock Fund (denominated in NMR).
-          The goal is to understand the performance difference between the regular Retail Fund driven by current thematic topics (ESG, Crypto, Big Tech, etc.) versus the
-          Quant Fund driven by automated quantative strategies through Machine Learning Algorithms.</p>
-          <p>By generating a smart contract (The Investooor) below, you create an individual address for you to deposit your money into - completely trustless, non-custodial and verified via Ethereum's block chain.</p>
-          <p>Hyphy Capital follows the ultimate vision that no single investor has to either risk the exposure to gain return in financial markets nor has to build quantitative models themselves. We want to allow every interested individual to connect their favorite
-            wallet of choice (Metamask, etc.) and then interact with the Hyphy-Capital Smartcontract (HCSC) to deposit or withdraw ETH (or Stablecoins). No more headaches for investors and simple, automated apy collection for the investor. </p></div>
-
+        <div class="description-header"><h3 style='font-family: "Montserrat", sans-serif;'>Where The Yields Come From:</h3>
+          <div class="description-text-pitchapp">
+            <div class="description-text-pitchapp-left">
+            <h2 >TradFi Type Farming, with DeFi Type Yields</h2>
+              <div class='small-text'>
+                <h3 class="text-highlight2">Hyphy Finance uses algorithmic and valuation based trading models</h3></div>
+                  <p style='margin: 0; padding: 1px;'>But You decide how much of your portfolio is allocated to each fund</p>
+                  <p style='margin: 0; padding: 1px;'> Most of our trading is open sourced. Check the slides to right for a <span style="color:lightseagreen;text-decoration: underline;">structural overview</span>.</p>
+                  <p style='margin: 0; padding: 1px;'> All your returns are consistently updated and either cumulated or paid out <span style="color:lightseagreen;text-decoration: underline;">weekly </span>!</p>
+              <div class="contract-generator">    
+                <div class="generate-contract1">
+                  <a href="quant" class="sc-button1"> Quant Fund</a>
+                </div>
+                <div class="generate-contract1">
+                  <a href="retail" class="sc-button1"> Retail Fund</a>
+                </div>
+              </div>
+            </div>
+            <div class="description-text-pitchapp-right">
+              <iframe src="https://pitch.com/embed/d4116bac-54a6-44ca-a33e-fd8a8e272f26" allow="fullscreen" width="100%" height="370" style="border:0"></iframe>
+            </div>
+          </div>
         </div>
         <div class="usp-wrapper">
           <div class="No-Lock">
@@ -125,7 +279,7 @@
                 <div class="card-content">
 
                   <h2 class="card-title-right">QUANT FUND - for the right side of the curve</h2>
-                  <p class="card-body">ML Model based statistical, market neutral, stock Fund denominated in crypto</p>
+                  <p class="card-body">ML Model based statistical, market neutral, stock Fund</p>
                   <a href="quant" class="button"> Learn More</a>
                 </div>
               </div>
@@ -133,7 +287,7 @@
           </div>
         </div>
         <div class="investor-card">
-          <div class="investor-description-header"><h3>The Investooor</h3></div>
+          <div class="description-header"><h3 style='font-family: "Montserrat", sans-serif;'>What Returns Can You Expect </h3>
           <div class="description-card-text"> <p>Determine your individual and personalized portfolio exposure via the slider below</p>
             <div class="form-group">
               <label class='form-invest' for="price">Initial Investemnt</label>
@@ -183,14 +337,14 @@
               function calculateDrawdownCost() {
                 const price = priceInput.value;
                 const quantity = quantityInput.value;
-                const cost = price * quantity;
+                const cost = price * quantity * 2;
                 console.log(cost);
                 total.innerText = cost.toFixed(1) + "%";
               }
               function calculateApyCost() {
                 const price = priceInput.value;
                 const quantity = quantityInput.value;
-                const cost = price * quantity;
+                const cost = ((100+(quantity/10))/200) * 10;
                 console.log(cost);
                 total2.innerText = cost.toFixed(1) + "%";
               }
@@ -207,55 +361,56 @@
 
               </script>
               <div class="generate-contract">
-                <a href="retail.html" class="sc-button"> Generate Smart Contract</a>
+                <a href="index.html" class="sc-button"> Generate Smart Contract</a>
               </div>
+              
             </div>
         </div>
         <div class="description-2-wrapper">
-          <div class="description-header"><h3>3 - Other Information</h3></div>
+          <div class="description-header"><h3 style='font-family: "Montserrat", sans-serif;'>Other Information </h3>
           <div class="Other-columns">
-            <div class="NFT-slider"><h3>Hyphy Capital's NFT Collection</h3>
-              <div class="filterDiv 001 show">
-                <div class="card">
-                  <div class="slider">
-                    <div class="slides">
-                      <input type="radio" name="radio-btn" id="radio1">
-                      <input type="radio" name="radio-btn" id="radio2">
-                      <input type="radio" name="radio-btn" id="radio3">
-                      <input type="radio" name="radio-btn" id="radio4">
+            <div class="NFT-slider"><div class="shifter"><h3>Hyphy Capital's NFT Collection</h3></div>
+                <div class="filterDivindex 001 show">
+                  <div class="card">
+                    <div class="slider">
+                      <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
 
-                      <div title='KrazyKoala NFT' class="slide first">
-                        <a href="https://opensea.io/assets/0x8056ad118916db0feef1c8b82744fa37e5d57cc0/7909">
-                        <img src="hc_nft_1.jpeg" alt=""></a>
-                      </div>
-                      <div class="slide">
-                        <a href="https://opensea.io/assets/0xda22422592ee3623c8d3c40fe0059cdecf30ca79/24065">
-                        <img src="nft2.png" alt=""></a>
-                      </div>
-                      <div class="slide">
-                        <a href="https://opensea.io/assets/0x78c7549716a6290bd92005eb2a4da9701599428a/3004">
-                        <img src="nft3.jpeg" alt=""></a>
-                      </div>
-                      <div class="slide ">
-                        <a href="https://opensea.io/assets/0x78c7549716a6290bd92005eb2a4da9701599428a/5715">
-                        <img src="nft4.jpeg" alt=""></a>
-                      </div>
-                      <div class="navigation-auto">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
+                        <div title='KrazyKoala NFT' class="slide first">
+                          <a href="https://opensea.io/assets/0x8056ad118916db0feef1c8b82744fa37e5d57cc0/7909">
+                          <img src="hc_nft_1.jpeg" alt=""></a>
+                        </div>
+                        <div class="slide">
+                          <a href="https://opensea.io/assets/0xda22422592ee3623c8d3c40fe0059cdecf30ca79/24065">
+                          <img src="nft2.png" alt=""></a>
+                        </div>
+                        <div class="slide">
+                          <a href="https://opensea.io/assets/0x78c7549716a6290bd92005eb2a4da9701599428a/3004">
+                          <img src="nft3.jpeg" alt=""></a>
+                        </div>
+                        <div class="slide ">
+                          <a href="https://opensea.io/assets/0x78c7549716a6290bd92005eb2a4da9701599428a/5715">
+                          <img src="nft4.jpeg" alt=""></a>
+                        </div>
+                        <div class="navigation-auto">
+                          <div class="auto-btn1"></div>
+                          <div class="auto-btn2"></div>
+                          <div class="auto-btn3"></div>
+                          <div class="auto-btn4"></div>
 
+                        </div>
                       </div>
-                    </div>
-                      <div class="navigation-manual">
-                      <label for="radio1" class="manual-btn"></label>
-                      <label for="radio2" class="manual-btn"></label>
-                      <label for="radio3" class="manual-btn"></label>
-                      <label for="radio4" class="manual-btn"></label>
+                        <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
 
+                        </div>
                       </div>
-                    </div>
                 </div>
               </div>
             </div>
@@ -283,22 +438,27 @@
           </div>
         </div>
       </div>
-        <div class="Footer" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
-          <div class="Links">
-            <div class="twitter">
-              <a href="https://twitter.com" target="_blank"><img src="images/twitter_icon_lsg.png" style="color:red;width:18px;height:18px;"></a>
-            </div>
-            <div class="tele">
-            <a href="https://telegram.com" target="_blank"><img src="images/tele_icon_lsg.png" style="width:21px;height:21px;"></a>
-            </div>
-            <div class="reddit">
-            <a href="https://reddit.com" target="_blank"><img src="images/reddit_icon_lsg.png" style="width:19px;height:19px;"></a>
-            </div>
-          </div>
-          <div class="email">free_money@hyphy-capital.com</div>
-          <div class="Info">HYPHY Capital Global GmbH</div>
+      </div>
+      </div>
+    </div>
+    </div>
+  <div class="Footer" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
+    <div class="Links">
+      <div class="twitter">
+        <a href="https://twitter.com"><img src="images/twitter_icon_lsg.png" style="color:red;width:18px;height:18px;"></a>
+      </div>
+      <div class="tele">
+      <a href="https://telegram.com"><img src="images/tele_icon_lsg.png" style="width:21px;height:21px;"></a>
+      </div>
+      <div class="reddit">
+      <a href="https://reddit.com"><img src="images/reddit_icon_lsg.png" style="width:19px;height:19px;"></a>
+      </div>
+    </div>
+    <div class="email">free_money@hyphy-capital.com</div>
+    <div class="Info">HYPHY Capital Global GmbH</div>
 
-        </div>
+  </div>
+
 
 </body>
 
