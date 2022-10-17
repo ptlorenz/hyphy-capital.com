@@ -5,11 +5,11 @@
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="7140e152-b8b9-4e29-a7d3-95994d1954d9" data-blockingmode="auto" type="text/javascript"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <link rel="icon" type="image/png" href="images/favicon_new.png"/>
     <title>Funds</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index78.css">
+    <link rel="stylesheet" href="index81.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PZH8E61PS"></script>
@@ -69,16 +69,16 @@
           </div>
         </div>
       </div>
-      <div class="body-content">
+      <div class="body-content" style="position:absolute;top:7%;left:0;right:0;margin-left:auto;margin-right:auto; width: 1300px; text-align: center;">
         <div class="aum-wrapper">
           <div class="aum-text"><h2 style='font-family: "Montserrat", sans-serif;'>Total TVL</h2></div>
-          <div class="aum-figure" style='color:white'><h2> $57,845.66</h2></div>
+          <div class="aum-figure" style='color:white;text-shadow: 0 1px 10px lightseagreen,0 -1px 10px lightseagreen '><h2> $57,845.66</h2></div>
         </div>
         <div class="description-wrapper">
           <div class="description-header"><h3 style='font-family: "Montserrat", sans-serif;'>You Decide Your Own Yield!</h3>
           <div class="description-text-pitchapp">
             <div class="description-text-pitchapp-left">
-              <h2 >It's simple - Your Crypto, Your Yield</h2>
+              <h2 style='text-shadow: 0 2px 10px rgb(208, 148, 249),0 -2px 10px rgb(208, 148, 249) ;'>It's simple - Your Crypto, Your Yield</h2>
               <div class='small-text'>
                 <h3 class="text-highlight">You decide your level of risk, and receive the return you want* </h3></div>
               <p style='margin: 0; padding: 1px;'>A thinner distribution represents more <span style="color:#6E50DC;text-decoration: underline;font-weight: 900;">stable (but lower) </span> returns!</p>
@@ -230,7 +230,7 @@
         <div class="description-header"><h3 style='font-family: "Montserrat", sans-serif;'>Where The Yields Come From:</h3>
           <div class="description-text-pitchapp">
             <div class="description-text-pitchapp-left">
-            <h2 >TradFi Type Farming, with DeFi Type Yields</h2>
+            <h2 style='text-shadow: 0 2px 10px lightseagreen,0 -2px 10px lightseagreen '>TradFi Type Farming, with DeFi Type Yields</h2>
               <div class='small-text'>
                 <h3 class="text-highlight2">Hyphy Finance uses algorithmic and valuation based trading models</h3></div>
                   <p style='margin: 0; padding: 1px;'>But You decide how much of your portfolio is allocated to each fund</p>
@@ -450,7 +450,7 @@
       </div>
     </div>
     </div>
-  <div class="Footer" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f )">
+  <div class="Footer" style="background-image: linear-gradient(to right, #17181f , #282c3c, #17181f );">
     <div class="Links">
       <div class="twitter">
         <a href="https://twitter.com"><img src="images/twitter_icon_lsg.png" style="color:red;width:18px;height:18px;"></a>
@@ -466,6 +466,7 @@
     <div class="Info">HYPHY Capital Global GmbH</div>
 
   </div>
+  <script  src="./script_background.js"></script>
 
 
 </body>
