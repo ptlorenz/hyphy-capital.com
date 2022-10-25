@@ -9,7 +9,7 @@
     <title>Funds</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index81.css">
+    <link rel="stylesheet" href="index87.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PZH8E61PS"></script>
@@ -21,7 +21,7 @@
       gtag('config', 'G-0PZH8E61PS');
     </script>
   </head>
-  <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
+  <body onload="runAnimations(),runAnimations2()" style="background: linear-gradient(-65deg, rgb(14, 47, 61),rgb(23, 130, 125));background-size: 400% 400%;animation: gradient 20s ease infinite;height: 220vh;">
   <div id="PopUpMain">
       <div id="PopUp">
         <h3 id="Heading">This website is an Alpha Build / Mock-Up</h3>
@@ -64,7 +64,7 @@
               <!-- The Modal -->
             </div>
             <div class="brand">
-              <p><a href="index.html" class="button-wallet" target="_blank"> Connect Metamask</a></p>
+              <p><a href="index.html" class="button-wallet" target="_blank"> Launch App</a></p>
             </div>
           </div>
         </div>
@@ -72,21 +72,24 @@
       <div class="body-content" style="position:absolute;top:7%;left:0;right:0;margin-left:auto;margin-right:auto; width: 1300px; text-align: center;">
         <div class="aum-wrapper">
           <div class="aum-text"><h2 style='font-family: "Montserrat", sans-serif;'>Total TVL</h2></div>
-          <div class="aum-figure" style='color:white;text-shadow: 0 1px 10px lightseagreen,0 -1px 10px lightseagreen '><h2> $57,845.66</h2></div>
+          <div class="aum-figure" style='color:white;text-shadow: 0 1px 10px lightseagreen,0 -1px 10px lightseagreen '><h2>$<span class="counter">57845</span></h2></div>
         </div>
         <div class="description-wrapper">
-          <div class="description-header"><h3 style='font-family: "Montserrat", sans-serif;'>You Decide Your Own Yield!</h3>
+          <div class="description-header">
           <div class="description-text-pitchapp">
             <div class="description-text-pitchapp-left">
-              <h2 style='text-shadow: 0 2px 10px rgb(208, 148, 249),0 -2px 10px rgb(208, 148, 249) ;'>It's simple - Your Crypto, Your Yield</h2>
+              <div class='console-container'>It's easy - Your
+                <span id='text'></span>
+                <div class='console-underscore' id='console'>&#95;</div>
+              </div>
               <div class='small-text'>
                 <h3 class="text-highlight">You decide your level of risk, and receive the return you want* </h3></div>
               <p style='margin: 0; padding: 1px;'>A thinner distribution represents more <span style="color:#6E50DC;text-decoration: underline;font-weight: 900;">stable (but lower) </span> returns!</p>
               <p style='margin: 0; padding: 1px;'> A wider distribution usually goes for <span style="color:#0db1b4ff;text-decoration: underline;">higher (but more volatile)</span> returns!</p>
               <p style='margin: 0; padding: 1px;'> And the optimal portfolio is <span style="color:#3282CB;text-decoration: underline;">optimizing </span> for Stability (Risk) and Return!</p>
               <p style='margin: 0; padding-top: 20px;'> You control how much of your funds are allocated to what risk exposure!</p>
-              <div class="generate-contract1">
-                <a href="retail.html" class="sc-button1"> LET'S GO!</a>
+              <div class="generate-contract3" style='position: relative;padding-top: 60px;'>
+                <a href="retail.html" class="sc-button1"> Launch App!</a>
               </div>
               <div class="arrow"><img src="images/arrow1.png" width="160px" height="70%"></div>
             </div>
@@ -217,17 +220,17 @@
           </div>
         </div>
         <div class="highlights">
-          <div class="trades"> <h3>2,786</h3></div>
-          <div class="trades"> <h3>9 - 19% </h3></div>
-          <div class="trades"> <h3>6.6 </h3></div>
-          <div class="trades"> <h3>5 </h3></div>
+          <div class="trades"> <h3><span class="counter">3429</span></h3></div>
+          <div class="trades"> <h3><span class="counter">19</span>%</h3></div>
+          <div class="trades"> <h3><span class="counter">7</span>.<span class="counter">2</span></h3></div>
+          <div class="trades"> <h3><span class="counter">5</span></h3></div>
           <div class="trades-low"> <h3> Executed Trades</h3></div>
           <div class="trades-low"> <h3> APY</h3></div>
           <div class="trades-low"> <h3> Optimal Sharpe</h3></div>
           <div class="trades-low"> <h3> Users</h3></div>
         </div>
         <div class="description-wrapper">
-        <div class="description-header"><h3 style='font-family: "Montserrat", sans-serif;'>Where The Yields Come From:</h3>
+        <div class="description-header">
           <div class="description-text-pitchapp">
             <div class="description-text-pitchapp-left">
             <h2 style='text-shadow: 0 2px 10px lightseagreen,0 -2px 10px lightseagreen '>TradFi Type Farming, with DeFi Type Yields</h2>
@@ -236,7 +239,18 @@
                   <p style='margin: 0; padding: 1px;'>But You decide how much of your portfolio is allocated to each fund</p>
                   <p style='margin: 0; padding: 1px;'> Most of our trading is open sourced. Check the slides to right for a <span style="color:lightseagreen;text-decoration: underline;">structural overview</span>.</p>
                   <p style='margin: 0; padding: 1px;'> All your returns are consistently updated and either cumulated or paid out <span style="color:lightseagreen;text-decoration: underline;">weekly </span>!</p>
-              <div class="contract-generator">    
+                  <div class="text">
+                    <h2 style='padding-top:20px;'>Hyphy Finance is <span class="word green">#feeless</span>
+                        <span class="word purplish"> #transparent</span>
+                        <span class="word green"> #predictable</span>
+                        <span class="word blue"> #money</span>
+                        <span class="word greener"> #yours</span>
+                        <span class="word purple"> #curvy</span>
+                        <span class="word greenish"> #freedom</span>
+                        <span class="word blueish"> #love</span>
+                    </h2>
+                  </div>
+                  <div class="contract-generator">    
                 <div class="generate-contract1">
                   <a href="quant" class="sc-button1"> Quant Fund</a>
                 </div>
@@ -252,13 +266,13 @@
         </div>
         <div class="usp-wrapper">
           <div class="No-Lock">
-            <img src="images/nofee.png" style="width:24px;height:24px;"><p>No Lock Up or Minimums</p>
+            <img src="images/nofee.png" style="width:34px;height:34px;"><h3>No Lock Up or Minimums</h3>
           </div>
           <div class="No-Asset">
-          <img src="images/minus.png" style="width:24px;height:24px;"><p>No Asset Management Fee</p>
+          <img src="images/minus.png" style="width:34px;height:34px;"><h3>No Asset Management Fee</h3>
           </div>
           <div class="Performance-Fee">
-          <img src="images/percentage_sign.png" style="width:21px;height:21px;"></a><p>10% Performance Fee included</p>
+          <img src="images/percentage_sign.png" style="width:29px;height:29px;"></a><h3>10% Performance Fee included</h3>
           </div>
         </div>
         <div class="attention-wrapper">
@@ -462,8 +476,8 @@
       <a href="https://reddit.com"><img src="images/reddit_icon_lsg.png" style="width:19px;height:19px;"></a>
       </div>
     </div>
-    <div class="email">free_money@hyphy-capital.com</div>
-    <div class="Info">HYPHY Capital Global GmbH</div>
+    <div class="email">free_money@hyphy.finance</div>
+    <div class="Info">HYPHY Finance Global GmbH</div>
 
   </div>
   <script  src="./script_background.js"></script>
@@ -472,3 +486,154 @@
 </body>
 
 </html>
+<script>// function([string1, string2],target id,[color1,color2])    
+  consoleText([' Crypto', ' Yield'], 'text',['white','white']);
+ 
+ function consoleText(words, id, colors) {
+   if (colors === undefined) colors = ['#fff'];
+   var visible = true;
+   var con = document.getElementById('console');
+   var letterCount = 1;
+   var x = 1;
+   var waiting = false;
+   var target = document.getElementById(id)
+   target.setAttribute('style', 'color:' + colors[0])
+   window.setInterval(function() {
+ 
+     if (letterCount === 0 && waiting === false) {
+       waiting = true;
+       target.innerHTML = words[0].substring(0, letterCount)
+       window.setTimeout(function() {
+         var usedColor = colors.shift();
+         colors.push(usedColor);
+         var usedWord = words.shift();
+         words.push(usedWord);
+         x = 1;
+         target.setAttribute('style', 'color:' + colors[0])
+         letterCount += x;
+         waiting = false;
+       }, 1000)
+     } else if (letterCount === words[0].length + 1 && waiting === false) {
+       waiting = true;
+       window.setTimeout(function() {
+         x = -1;
+         letterCount += x;
+         waiting = false;
+       }, 1000)
+     } else if (waiting === false) {
+       target.innerHTML = words[0].substring(0, letterCount)
+       letterCount += x;
+     }
+   }, 120)
+   window.setInterval(function() {
+     if (visible === true) {
+       con.className = 'console-underscore hidden'
+       visible = false;
+ 
+     } else {
+       con.className = 'console-underscore'
+ 
+       visible = true;
+     }
+   }, 400)
+ }
+ </script>
+ <script>
+  var words = document.getElementsByClassName('word');
+  var wordArray = [];
+  var currentWord = 0;
+
+  words[currentWord].style.opacity = 1;
+  for (var i = 0; i < words.length; i++) {
+    splitLetters(words[i]);
+  }
+
+  function changeWord() {
+    var cw = wordArray[currentWord];
+    var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+    for (var i = 0; i < cw.length; i++) {
+      animateLetterOut(cw, i);
+    }
+    
+    for (var i = 0; i < nw.length; i++) {
+      nw[i].className = 'letter behind';
+      nw[0].parentElement.style.opacity = 1;
+      animateLetterIn(nw, i);
+    }
+    
+    currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+  }
+
+  function animateLetterOut(cw, i) {
+    setTimeout(function() {
+      cw[i].className = 'letter out';
+    }, i*30);
+  }
+
+  function animateLetterIn(nw, i) {
+    setTimeout(function() {
+      nw[i].className = 'letter in';
+    }, 340+(i*30));
+  }
+
+  function splitLetters(word) {
+    var content = word.innerHTML;
+    word.innerHTML = '';
+    var letters = [];
+    for (var i = 0; i < content.length; i++) {
+      var letter = document.createElement('span');
+      letter.className = 'letter';
+      letter.innerHTML = content.charAt(i);
+      word.appendChild(letter);
+      letters.push(letter);
+    }
+    
+    wordArray.push(letters);
+  }
+
+  changeWord();
+  setInterval(changeWord, 1200);
+</script>
+<script type="text/javascript">
+const animationDuration = 4500;
+const animationDuration2 = 10200;
+
+const frameDuration = 1000 / 60;
+
+const totalFrames = Math.round( animationDuration / frameDuration );
+const totalFrames2 = Math.round( animationDuration2 / frameDuration );
+
+const easeOutQuad = t => t * ( 2 - t );
+
+
+const animateCountUp = el => {
+	let frame = 0;
+	const countTo = parseInt( el.innerHTML, 10 );
+	
+	const counter = setInterval( () => {
+		frame++;
+		
+		const progress = easeOutQuad( frame / totalFrames );
+		
+		const currentCount = Math.round( countTo * progress );
+
+		
+		if ( parseInt( el.innerHTML, 10 ) !== currentCount ) {
+			el.innerHTML = currentCount;
+		}
+
+		
+		if ( frame === totalFrames ) {
+			clearInterval( counter );
+		}
+	}, frameDuration );
+};
+
+
+
+
+const runAnimations = () => {
+	const countupEls = document.querySelectorAll( '.counter' );
+	countupEls.forEach( animateCountUp );
+};
+</script>

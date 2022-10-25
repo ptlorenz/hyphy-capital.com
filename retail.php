@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.7.1/css/all.css">
-    <link href="./index81.css" rel="stylesheet" type="text/css">
+    <link href="./index87.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
   <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
