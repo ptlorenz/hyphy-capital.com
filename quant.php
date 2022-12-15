@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <link rel="icon" type="image/png" href="images/favicon_new.png"/>
     <title>Quant</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -11,22 +11,22 @@
     <link href="./index87.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head>
-  <body style="background-color:#09232eff;background-image: linear-gradient(to right, rgb(14, 47, 61),rgb(23, 130, 125))">
+  <body style="background: linear-gradient(-65deg, rgb(14, 47, 61),rgb(23, 130, 125));background-size: 400% 400%;animation: gradient 20s ease infinite;height: 200vh;">
     <div class="banner"></div>
     <div class="container">
       <div class="nav-wrapper" >
         <div class="left-side">
-          <div class="nav-link-wrapper active-nav-link">
+            <div class="nav-link-wrapper active-nav-link">
 
-            <a href="index"><p>FUNDS</p></a>
-          </div>
-          <div class="nav-link-wrapper">
-            <a href="about"><p>ABOUT</p></a>
-          </div>
-          <div class="nav-link-wrapper">
-              <a href="about"><p>CONTACT</p></a>
+              <a href="index"><p class="text-highlight">FUNDS</p></a>
             </div>
-        </div>
+            <div class="nav-link-wrapper">
+              <a href="about"><p class="text-highlight2">ABOUT</p></a>
+            </div>
+            <div class="nav-link-wrapper">
+              <a href="about"><p class="text-highlight3">CONTACT</p></a>
+            </div>
+          </div>
         <div class="middle-side">
           <img src="images/Hyphy_Finance_Logo.png" style="width:280px;height:82px;"></a>
         </div>
@@ -255,8 +255,8 @@
       <a href="https://reddit.com"><img src="images/reddit_icon_lsg.png" style="width:19px;height:19px;"></a>
       </div>
     </div>
-    <div class="email">free_money@hyphy-capital.com</div>
-    <div class="Info">HYPHY Capital Global GmbH</div>
+    <div class="email">free_money@hyphy.finance</div>
+    <div class="Info">HYPHY Finance Global GmbH</div>
   </div>
   </body>
   <script>
@@ -620,7 +620,7 @@
   }
 
   async function getData_weekly_ytd() {
-    const response = await fetch('Newest_YTD_Plot_Fund_Analysis.csv');
+    const response = await fetch('Newest_Plot_YTD_Fund_Analysis.csv');
     const data = await response.text();
 
     const rows = data.split("\n").slice(1);
@@ -728,7 +728,7 @@
   }
 
   async function getData_cumulative_ytd() {
-    const response = await fetch('Newest_YTD_Plot_Fund_Analysis.csv');
+    const response = await fetch('Newest_Plot_YTD_Fund_Analysis.csv');
     const data = await response.text();
 
     const rows = data.split("\n").slice(1);
